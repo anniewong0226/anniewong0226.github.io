@@ -1,11 +1,4 @@
-Title,UK Whole Economy: Output per hour worked % change per annum SA
-CDID,LZVD
-Source dataset ID,PRDY
-PreUnit,
-Unit,%
-Release date,14-08-2025
-Next release,13-Nov-25
-Important notes,
+date,value
 1972,2.9
 1973,4.6
 1974,-1.8
