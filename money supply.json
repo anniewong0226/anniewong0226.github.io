@@ -1,0 +1,16 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "description": "A line chart of money Supply over time in US",
+  "data": {
+    "url": "https://raw.githubusercontent.com/anniewong0226/anniewong0226.github.io/refs/heads/main/money_supply_clean.csv"
+  },
+  "mark": "line",
+  "title": {
+    "text": "A line Chart of money supply, 1959-2025",
+    "subtitle": "M2 nominal money supply, US"
+  },
+  "encoding": {
+    "x": {"field": "date", "type": "temporal"},
+    "y": {"field": "money supply", "type": "quantitative"}
+  }
+}
