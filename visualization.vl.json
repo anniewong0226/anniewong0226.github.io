@@ -1,0 +1,44 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "background": "#FFF1E5",
+  "description": "Log GDP per capita (2011 PPP, thousands) across countries over time",
+  "data": {
+    "url": "https://raw.githubusercontent.com/anniewong0226/anniewong0226.github.io/refs/heads/main/mpd2020_log_wide.csv",
+    "format": {"type": "csv"}
+  },
+  "transform": [
+    {
+      "fold": [
+        "Brazil",
+        "China",
+        "Germany",
+        "India",
+        "Japan",
+        "Nigeria",
+        "United Kingdom",
+        "United States"
+      ],
+      "as": ["country", "log_gdppc"]
+    },
+    {"filter": "datum.log_gdppc > 0"}
+  ],
+  "mark": "line",
+  "encoding": {
+    "x": {"field": "year", "type": "temporal", "title": "Year"},
+    "y": {
+      "field": "log_gdppc",
+      "type": "quantitative",
+      "title": "Log GDP per capita (2011 PPP, thousands)",
+      "scale": {"domain": [6, 11]}
+    },
+    "color": {"field": "country", "type": "nominal", "title": "Country"},
+    "tooltip": [
+      {"field": "country", "type": "nominal"},
+      {"field": "year", "type": "temporal"},
+      {"field": "log_gdppc", "type": "quantitative", "title": "log(GDPpc)"}
+    ]
+  },
+  "width": 800,
+  "height": 400,
+  "config": {}
+}
