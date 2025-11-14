@@ -48,7 +48,7 @@
     </h1>
     <p style="margin-top: 0px; color: darkblue">
         <!-- we're setting the margin to 0px so the header and authour name are close together -->
-        Your Name | <a href="https://www.linkedin.com/in/annie-wong-ba9150218">LinkedIn</a> | <a
+        Annie Wong | <a href="https://www.linkedin.com/in/annie-wong-ba9150218">LinkedIn</a> | <a
             href="https://www.github.com/YOUR_GITHUB">GitHub</a>
     </p>
     <h3 class="small"> <!-- We have added a class to the header called "small" which we can use to style it in the CSS -->
@@ -56,18 +56,14 @@
     </h3>
 
     <!-- We're organising the page into sections, with each section containing a chart, title and a description -->
-            <h2>Coding Challenge 1 </h2>
+            <h2>Coding Challenge 1: Hosting </h2>
             <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-                This is the coding challenge from week 1
+                Embedding vega-lite charts on a webpage using vega-embed library.
             </p>
-        </div>
-    </section>
-
     <section>
         <div class="chart-description">
-            <h2>Section 1: Survey on Harm </h2>
             <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-               
+                
             </p>
         </div>
         <figure id="Location1"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
@@ -75,7 +71,6 @@
 
     <section>
         <div class="chart-description">
-            <h2>Section 2: Reciprocal tariff </h2>
             <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
                 
             </p>
@@ -93,9 +88,9 @@
                 
             </p>
         </div>
-        <figure id="money_supply"></figure> 
-        <figure id="nuclear_fr"></figure> 
-        <figure id="china_unemployment"></figure> 
+        <!-- <figure id="nuclear_fr" style="width: 100%; min-width: 300px;"></figure> this is how to manipulate width -->
+        <figure id="nuclear_fr" style="width: 100%; min-width: 300px;"></figure>
+        <figure id="china_unemployment" style="width: 100%; min-width: 300px;"></figure>
 
     <section>
         <div class="chart-description">
@@ -111,7 +106,7 @@
         <div class="chart-description">
             <h2> Coding Challenge 4: Identifying Bad Graphs</h2>
             <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-                This is a graph from the Financial Times with a poorly represented scale. I assessed the original graph and suspect that they have used the log scale but used the unaltered value as the scale. 
+                This is a graph from the Financial Times with a poorly represented scale. I accessed the original graph and suspect that they have used the log scale but used the unaltered value as the scale. 
                 For example, the US did have around $60000 in 2020 as GDP per head, but on log scale, it's more like 11. I used the same data source from the Maddison Project, but an older version ( because i couldnt download the 2023 version somehow)
                 and created the following graph on scale.    
             </p>
@@ -127,6 +122,16 @@
         <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
     </section>
 
+     <section>
+        <div class="chart-description">
+            <h2> Coding Challenge 6: </h2>
+            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
+                Map
+            </p>
+        </div>
+        <figure id="map_wales"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+    </section>
+
     <!-- This is a script, it's a way to run JavaScript code on the page -->
     <script>
 
@@ -134,13 +139,13 @@
                                                                                                                     // You should have a spec for a graph in this same folder. Just specify its name here, e.g. let figure_1_spec = "chart1.json"
         let figure_2_spec = "fig1_reciprocal-tariffs.json";
 
-        let figure_4_spec= "money supply.json";
         vegaEmbed('#Location1', figure_1_spec) // We're using the vegaEmbed function to put a graph in the element with id figure_1
         vegaEmbed('#Location2', figure_2_spec)
-        vegaEmbed('#money_supply', figure_4_spec)
         vegaEmbed('#nuclear_fr', 'nuclearpower.json');
         vegaEmbed('#china_unemployment', 'China_unemployment.json');
         vegaEmbed('#real_gdp','visualization.vl.json');
+        vegaEmbed('#map_sample','wales.json');
+        
        
 
 
