@@ -1,0 +1,50 @@
+{
+      "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+      "width": 600,
+      "height": 800,
+      "title": {
+        "text": "Germany States",
+        "fontSize": 20,
+        "font": "Arial"
+      },
+      "data": {
+        "url": "https://raw.githubusercontent.com/anniewong0226/anniewong0226.github.io/refs/heads/main/de.json",
+        "format": {
+          "type": "json",
+          "property": "features"
+        }
+      },
+      "projection": {
+        "type": "mercator"
+      },
+      "mark": {
+        "type": "geoshape",
+        "stroke": "#333",
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "color": {
+          "field": "properties.name",
+          "type": "nominal",
+          "legend": {
+            "title": "State Name",
+            "orient": "right"
+          },
+          "scale": {
+            "scheme": "category20"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "properties.name",
+            "type": "nominal",
+            "title": "State"
+          },
+          {
+            "field": "properties.id",
+            "type": "nominal",
+            "title": "State Code"
+          }
+        ]
+      }
+    }

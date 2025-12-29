@@ -1,0 +1,125 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Crop Production Index of the United States",
+    "fontSize": 18,
+    "anchor": "middle"
+  },
+  "width": 800,
+  "height": 500,
+  "data": {
+    "url": "https://api.worldbank.org/v2/country/US/indicator/AG.PRD.CROP.XD?format=json&per_page=20000&date=1961:2022",
+    "format": {
+      "type": "json",
+      "property": "[1]"
+    }
+  },
+  "transform": [
+    {
+      "filter": "datum.value !== null"
+    },
+    {
+      "calculate": "datum.country.value",
+      "as": "country_name"
+    },
+    {
+      "calculate": "toNumber(datum.date)",
+      "as": "year"
+    },
+    {
+      "filter": {
+        "field": "country_name",
+        "oneOf": [
+          "United States"
+        ]
+      }
+    }
+  ],
+  "mark": {
+    "type": "line",
+    "point": false,
+    "strokeWidth": 2,
+    "tooltip": true
+  },
+  "encoding": {
+    "x": {
+      "field": "year",
+      "type": "quantitative",
+      "title": "Year",
+      "scale": {
+        "domain": [1961, 2022]
+      },
+      "axis": {
+        "format": "d",
+        "tickCount": 10,
+        "labelFontSize": 11,
+        "titleFontSize": 13
+      }
+    },
+    "y": {
+      "field": "value",
+      "type": "quantitative",
+      "title": "Crop Production Index (2014-2016 = 100)",
+      "scale": {
+        "domain": [0, 200]
+      },
+      "axis": {
+        "labelFontSize": 11,
+        "titleFontSize": 13
+      }
+    },
+    "color": {
+      "field": "country_name",
+      "type": "nominal",
+      "title": "Country",
+      "scale": {
+        "scheme": "tableau20"
+      },
+      "legend": {
+        "orient": "right",
+        "titleFontSize": 12,
+        "labelFontSize": 10
+      }
+    },
+    "opacity": {
+      "condition": {
+        "param": "country_select",
+        "value": 1
+      },
+      "value": 0.1
+    },
+    "tooltip": [
+      {
+        "field": "country_name",
+        "type": "nominal",
+        "title": "Country"
+      },
+      {
+        "field": "year",
+        "type": "quantitative",
+        "title": "Year"
+      },
+      {
+        "field": "value",
+        "type": "quantitative",
+        "title": "Index Value",
+        "format": ".2f"
+      }
+    ]
+  },
+  "params": [
+    {
+      "name": "country_select",
+      "select": {
+        "type": "point",
+        "fields": ["country_name"]
+      },
+      "bind": "legend"
+    }
+  ],
+  "config": {
+    "view": {
+      "stroke": "transparent"
+    }
+  }
+}

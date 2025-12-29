@@ -1,0 +1,77 @@
+{
+  "config": {"view": {"continuousWidth": 300, "continuousHeight": 300}},
+  "data": {"name": "data-c163c1e1a50886b8885900c15fb06453"},
+  "background": "#FFF1E5",
+  "mark": {"type": "line"},
+  "encoding": {
+    "x": {"field": "TIME_PERIOD", "title": "Year", "type": "ordinal"},
+    "y": {
+      "field": "OBS_VALUE",
+      "title": "Percentage of wages of men in the same decile(%)",
+      "type": "quantitative"
+    }
+  },
+  "title": {
+    "text": "Gender Wage gap in OECD countries (2015-2023)",
+    "fontsize": 15
+  },
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json",
+  "datasets": {
+    "data-c163c1e1a50886b8885900c15fb06453": [
+      {
+        "REF_AREA": "OECD",
+        "TIME_PERIOD": 2015,
+        "OBS_VALUE": 16.7491662952014,
+        "AGGREGATION_OPERATION": "MEAN"
+      },
+      {
+        "REF_AREA": "OECD",
+        "TIME_PERIOD": 2016,
+        "OBS_VALUE": 16.2032416021357,
+        "AGGREGATION_OPERATION": "MEAN"
+      },
+      {
+        "REF_AREA": "OECD",
+        "TIME_PERIOD": 2017,
+        "OBS_VALUE": 15.7827994267344,
+        "AGGREGATION_OPERATION": "MEAN"
+      },
+      {
+        "REF_AREA": "OECD",
+        "TIME_PERIOD": 2018,
+        "OBS_VALUE": 15.8460815852246,
+        "AGGREGATION_OPERATION": "MEAN"
+      },
+      {
+        "REF_AREA": "OECD",
+        "TIME_PERIOD": 2019,
+        "OBS_VALUE": 15.288246455215,
+        "AGGREGATION_OPERATION": "MEAN"
+      },
+      {
+        "REF_AREA": "OECD",
+        "TIME_PERIOD": 2020,
+        "OBS_VALUE": 13.8696789953009,
+        "AGGREGATION_OPERATION": "MEAN"
+      },
+      {
+        "REF_AREA": "OECD",
+        "TIME_PERIOD": 2021,
+        "OBS_VALUE": 13.8096906247288,
+        "AGGREGATION_OPERATION": "MEAN"
+      },
+      {
+        "REF_AREA": "OECD",
+        "TIME_PERIOD": 2022,
+        "OBS_VALUE": 13.7692370960105,
+        "AGGREGATION_OPERATION": "MEAN"
+      },
+      {
+        "REF_AREA": "OECD",
+        "TIME_PERIOD": 2023,
+        "OBS_VALUE": 13.7362741767237,
+        "AGGREGATION_OPERATION": "MEAN"
+      }
+    ]
+  }
+}

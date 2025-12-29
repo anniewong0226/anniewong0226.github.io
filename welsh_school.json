@@ -1,25 +1,13 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": {
-    "text": "Distribution of Language Medium in Welsh State School",
-    "fontSize": 17
+  "title":  {
+    "text": "Distribution of Medium of Language Instruction in Welsh State Schools",
+    "fontSize": 18,
+    "anchor": "start"
   },
-  "width": 300,
-  "height": 400,
+  "width": 700,
+  "height": 700,
   "background": "#FFF1E5",
-  "config": {
-    "title": {
-      "fontSize": 20,
-      "font": "Arial",
-      "fontWeight": "bold"
-    },
-    "legend": {
-      "titleFontSize": 14,
-      "labelFontSize": 12,
-      "titleFont": "Arial",
-      "labelFont": "Arial"
-    }
-  },
   "projection": {"type": "mercator"},
   "layer": [
     {
@@ -38,11 +26,17 @@
       "data": {
         "url": "https://raw.githubusercontent.com/anniewong0226/anniewong0226.github.io/refs/heads/main/df_schools_location.csv"
       },
-      "mark": "circle",
+      "mark": {"type": "circle", "size": 80},
       "encoding": {
         "longitude": {"field": "lon", "type": "quantitative"},
         "latitude": {"field": "lat", "type": "quantitative"},
-        "color": {"field": "language"},
+        "color": {
+          "field": "language",
+          "legend": {
+            "labelFontSize": 13,
+            "titleFontSize": 16
+            }
+        },
         "tooltip": [
           {"field": "language", "type": "nominal", "title": "Language"}
         ]
