@@ -1,5 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "title": "Amazon's Stock Price (Last 100 Days)",
   "description": "Amazon's stock price in the last 100 days",
   "width": 300,
   "height": 200,
