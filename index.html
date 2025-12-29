@@ -1,158 +1,162 @@
-<!-- This HTML file provides a simple example of a portfolio page. It contains a header, a few sections, and a few charts. -->
-<!-- It works with the three css files in this folder: example1.css, example2.css and example3.css. -->
-<!-- The HTML file defines the structure of the page, and the CSS files define how it looks. -->
-<!-- The CSS examples are all designed to work with this page. Try swapping them out on line 29 and see what happens. -->
-
-<!-- Take a look around and make your own copy to adapt for your own use. -->
-
-<!-- This is a comment -->
-<!-- Comments are not displayed in the browser -->
-<!-- They can be used to leave notes in the code -->
-
 <!DOCTYPE html>
 <html> 
-    <!-- HTML is heirarchial: tags like this define elements on the page. 
-    Each tag does something different. For example:
-        - The <html> tag defines the whole document.
-        - The <h1> tag defines a large heading
-        - The <p> tag defines a paragraph
-        - Tags appear as an opening <div> and closing </div> pair
-    -->
-
 <head>    
-    <!-- The head tag links to resources our page needs and defines information about it. Tags in the <head> aren't displayed on the page. -->
-
-    <!-- This is a link to a stylesheet which contains rules about how each element on the page should be defined-->
-    <!-- Try swapping example1.css to another, and take a look at example1.css to see if you understand it-->
-    <link rel="stylesheet" type="text/css" href="Example3.css">
-    <title>Annie's Portfolio</title> <!-- The title displayed in the browser tab, not on the page itself -->
-
-    <!-- This is a link to the vega-lite which we're using to make graphs -->
-    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
-
-    <style>
-        #chartGrid {
-            display: flex;
-        }
-        
-    </style>
+<link rel="stylesheet" type="text/css" href="Example3.css">
+<title>Annie's Portfolio</title>
+<script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+<style>
+#chartGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+.stock-chart {
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+</style>
 </head>
-
 <body> 
-<!-- The body tag contains the elements that visitors to our page will see. -->
-    <h1 class="big" style="margin-bottom: 0px;"> <!-- We have added a class to the header called "big" which we can use to style it in the CSS -->
-        <!-- This is a header, it is the largest text on the page -->
+<h1 class="big" style="margin-bottom: 0px;">
         Lok Yan Annie Wong
-    </h1>
-    <p style="margin-top: 0px; color: darkblue">
-        <!-- we're setting the margin to 0px so the header and authour name are close together -->
-        Annie Wong | <a href="https://www.linkedin.com/in/annie-wong-ba9150218">LinkedIn</a> | <a
-            href="https://www.github.com/YOUR_GITHUB">GitHub</a>
-    </p>
-    <h3 class="small"> <!-- We have added a class to the header called "small" which we can use to style it in the CSS -->
+</h1>
+<p style="margin-top: 0px; color: darkblue">
+        Annie Wong | <a href="https://www.linkedin.com/in/annie-wong-ba9150218">LinkedIn</a> | 
+href="https://www.github.com/anniewong0226">GitHub</a>
+</p>
+<h3 class="small">
         Here is my portfolio of charts.
-    </h3>
+</h3>
 
-    <!-- We're organising the page into sections, with each section containing a chart, title and a description -->
-            <h2>Coding Challenge 1: Display charts in your own site. </h2>
-            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
+<h2>Coding Challenge 1: Display charts in your own site. </h2>
+<p>
                 Embedding vega-lite charts on a webpage using vega-embed library.
-            </p>
-    <section>
-        <div class="chart-description">
-            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-                
-            </p>
-        </div>
-        <figure id="Location1"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
-    </section>
+</p>
+<section>
+<div class="chart-description">
+<p>
+</p>
+</div>
+<figure id="Location1"></figure>
+</section>
+<section>
+<div class="chart-description">
+<p>
+</p>
+</div>
+<figure id="Location2"></figure>
+</section>
 
-    <section>
-        <div class="chart-description">
-            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-                
-            </p>
-        </div>
-        <figure id="Location2"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
-    </section>
-    <!-- Do you want to add more sections? -->
-        <!-- Try copying pasting the section above -->
-        <!-- You'll need to change the id of the figure "<figure id="Location3"... -->
-        <!-- ... and add a new variable for the graph spec in the script at the bottom of the page -->
-    <section>
-        <div class="chart-description">
-            <h2> Coding Challenge 2: Building. Create your own visualisations </h2>
-            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-                
-            </p>
-        </div>
-        <!-- <figure id="nuclear_fr" style="width: 100%; min-width: 300px;"></figure> this is how to manipulate width -->
-        <figure id="nuclear_fr" style="width: 100%; min-width: 300px;"></figure>
-        <figure id="china_unemployment" style="width: 100%; min-width: 300px;"></figure>
+<section>
+<div class="chart-description">
+<h2> Coding Challenge 2: Building. Create your own visualisations </h2>
+<p>
+</p>
+</div>
+<figure id="nuclear_fr" style="width: 100%; min-width: 300px;"></figure>
+<figure id="china_unemployment" style="width: 100%; min-width: 300px;"></figure>
+</section>
 
-    <section>
-        <div class="chart-description">
-            <h2> Coding Challenge 3: Policy Debate </h2>
-            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
+<section>
+<div class="chart-description">
+<h2> Coding Challenge 3: Policy Debate </h2>
+<p>
                 Females are much more likely to participate in the labour market as part-time workers than their male counterparts, which contributed to the wage gap between male and female workers.
-            </p>
-        </div>
-        <figure id="part-time"></figure>
-        <figure id="gender-gap"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
-    </section>
+</p>
+</div>
+<figure id="part-time"></figure>
+<figure id="gender-gap"></figure>
+</section>
 
-     <section>
-        <div class="chart-description">
-            <h2> Coding Challenge 4: Replication. Re-create, then improve, someone else’s chart.</h2>
-            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
+<section>
+<div class="chart-description">
+<h2> Coding Challenge 4: Replication. Re-create, then improve, someone else's chart.</h2>
+<p>
                 This is a graph from the Financial Times with a poorly represented scale. I accessed the original graph and suspect that they have used the log scale but used the unaltered value as the scale. 
                 For example, the US did have around $60000 in 2020 as GDP per head, but on log scale, it's more like 11. I used the same data source from the Maddison Project, but an older version ( because i couldnt download the 2023 version somehow)
                 and created the following graph on scale.    
-            </p>
-            <p>Source: The Financial Times, "Can a fragmented Europe continue to prosper?" https://www.ft.com/content/b1f2c189-809f-4054-bf73-0eba674f4e13
-            </p>
-            <div style="text-align:center;">
-                <img src="IMG_0442.jpg" alt="Financial Times Bad Graph" width="500">
-            </div>
-        </div>
-        <p>Source: The Maddison Project (2020). "Maddison Project Database (MPD)". Version 2020. https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2020 
-        </p>
-        <figure id="real_gdp"></figure>
-        <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
-    </section>
+</p>
+<p>Source: The Financial Times, "Can a fragmented Europe continue to prosper?" https://www.ft.com/content/b1f2c189-809f-4054-bf73-0eba674f4e13
+</p>
+<div style="text-align:center;">
+<img src="IMG_0442.jpg" alt="Financial Times Bad Graph" width="500">
+</div>
+<p>Source: The Maddison Project (2020). "Maddison Project Database (MPD)". Version 2020. https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2020 
+</p>
+<figure id="real_gdp"></figure>
+</section>
 
-     <section>
-        <div class="chart-description">
-            <h2> Coding Challenge 7: Base maps and choropleths</h2>
-            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
+<section>
+<div class="chart-description">
+<h2> Coding Challenge 5: Scraping and API</h2>
+<p>
+</p>
+</div>
+<figure id="population_density"></figure>
+<figure id="crop_overtime"></figure>
+</section>
+
+<!-- NEW SECTION: Coding Challenge 6 -->
+<section>
+<section>
+<div class="chart-description">
+<h2>Coding Challenge 6: Batch API Download</h2>
+<p>
+    Using a loop to batch download time series data from Alpha Vantage API for 6 tech stocks.
+    Data was downloaded using Python, saved as JSON files to GitHub, and displayed here as interactive charts.
+</p>
+<p>
+    <a href="YOUR_COLAB_LINK_HERE" target="_blank">View Google Colab Notebook</a>
+</p>
+</div>
+
+<!-- Grid of 6 charts (3x2) -->
+<div id="chartGrid">
+    <div class="stock-chart" id="chart-AAPL"></div>
+    <div class="stock-chart" id="chart-GOOGL"></div>
+    <div class="stock-chart" id="chart-MSFT"></div>
+    <div class="stock-chart" id="chart-AMZN"></div>
+    <div class="stock-chart" id="chart-TSLA"></div>
+    <div class="stock-chart" id="chart-NVDA"></div>
+</div>
+</section>
+
+<section>
+<div class="chart-description">
+<h2> Coding Challenge 7: Base maps and choropleths</h2>
+<p>
                 Map of Welsh State Schools medium of language instruction
-            </p>
-        </div>
-        <figure id="map_wales"></figure>
-        <figure id="map_scotland"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
-    </section>
+</p>
+</div>
+<figure id="map_wales"></figure>
+<figure id="map_scotland"></figure>
+</section>
 
-    <!-- This is a script, it's a way to run JavaScript code on the page -->
-    <script>
+<script>
+// Existing charts
+let figure_2_spec = "fig1_reciprocal-tariffs.json";
+vegaEmbed('#Location1', 'survey_harm.json');
+vegaEmbed('#Location2', figure_2_spec);
+vegaEmbed('#nuclear_fr', 'nuclearpower.json');
+vegaEmbed('#china_unemployment', 'China_unemployment.json');
+vegaEmbed('#real_gdp','visualization.vl.json');
+vegaEmbed('#map_wales','welsh_school.json');
+vegaEmbed('#map_scotland','scotland.json');
+vegaEmbed('#part-time','part_time.json');
+vegaEmbed('#gender-gap','gender_gap.json');
+vegaEmbed('#population_density','population_world.json');
+vegaEmbed('#crop_overtime','crop_overtime.json');
 
-         // We're storing the URL of the graph we want to display in a variable
-                                                                                                                    // You should have a spec for a graph in this same folder. Just specify its name here, e.g. let figure_1_spec = "chart1.json"
-        let figure_2_spec = "fig1_reciprocal-tariffs.json";
+// NEW: Coding Challenge 6 - Loop through 6 stocks
+const stocks = ['AAPL', 'GOOGL', 'MSFT', 'AMZN', 'TSLA', 'NVDA'];
 
-        vegaEmbed('#Location1', 'survey_harm.json'); // We're using the vegaEmbed function to put a graph in the element with id figure_1
-        vegaEmbed('#Location2', figure_2_spec);
-        vegaEmbed('#nuclear_fr', 'nuclearpower.json');
-        vegaEmbed('#china_unemployment', 'China_unemployment.json');
-        vegaEmbed('#real_gdp','visualization.vl.json');
-        vegaEmbed('#map_wales','welsh_school.json');
-        vegaEmbed('#map_scotland','scotland.json');
-        vegaEmbed('#part-time','part_time.json');
-        vegaEmbed('#gender-gap','gender_gap.json');
-
-    </script>
-
+stocks.forEach(symbol => {
+    vegaEmbed(`#chart-${symbol}`, `${symbol}_graph.json`);
+});
+</script>
 </body>
-    
 </html>
