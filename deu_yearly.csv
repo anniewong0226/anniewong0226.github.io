@@ -1,0 +1,51 @@
+entity,entity_code,is_aggregate_entity,date,series,is_aggregate_series,generation_twh,share_of_generation_pct
+Germany,DEU,False,2020,Coal,False,134.6,23.75
+Germany,DEU,False,2020,Bioenergy,False,50.93,8.99
+Germany,DEU,False,2020,Wind,False,132.11,23.31
+Germany,DEU,False,2020,Solar,False,49.5,8.73
+Germany,DEU,False,2020,Other renewables,False,0.23,0.04
+Germany,DEU,False,2020,Other fossil,False,21.28,3.75
+Germany,DEU,False,2020,Net imports,False,-19.03,-3.36
+Germany,DEU,False,2020,Hydro,False,18.72,3.3
+Germany,DEU,False,2020,Gas,False,95.0,16.76
+Germany,DEU,False,2020,Nuclear,False,64.38,11.36
+Germany,DEU,False,2021,Nuclear,False,69.13,11.94
+Germany,DEU,False,2021,Wind,False,114.16,19.72
+Germany,DEU,False,2021,Solar,False,49.34,8.52
+Germany,DEU,False,2021,Other renewables,False,0.24,0.04
+Germany,DEU,False,2021,Other fossil,False,22.24,3.84
+Germany,DEU,False,2021,Net imports,False,-18.58,-3.21
+Germany,DEU,False,2021,Hydro,False,19.66,3.4
+Germany,DEU,False,2021,Gas,False,90.31,15.6
+Germany,DEU,False,2021,Coal,False,164.65,28.45
+Germany,DEU,False,2021,Bioenergy,False,49.1,8.48
+Germany,DEU,False,2022,Wind,False,124.81,22.02
+Germany,DEU,False,2022,Solar,False,60.3,10.64
+Germany,DEU,False,2022,Other renewables,False,0.21,0.04
+Germany,DEU,False,2022,Other fossil,False,21.65,3.82
+Germany,DEU,False,2022,Nuclear,False,34.71,6.12
+Germany,DEU,False,2022,Hydro,False,17.62,3.11
+Germany,DEU,False,2022,Gas,False,79.05,13.94
+Germany,DEU,False,2022,Coal,False,179.93,31.74
+Germany,DEU,False,2022,Bioenergy,False,48.6,8.57
+Germany,DEU,False,2022,Net imports,False,-27.26,-4.81
+Germany,DEU,False,2023,Other renewables,False,0.19,0.04
+Germany,DEU,False,2023,Wind,False,137.51,27.3
+Germany,DEU,False,2023,Solar,False,63.87,12.68
+Germany,DEU,False,2023,Other fossil,False,20.96,4.16
+Germany,DEU,False,2023,Nuclear,False,7.22,1.43
+Germany,DEU,False,2023,Net imports,False,9.22,1.83
+Germany,DEU,False,2023,Hydro,False,21.24,4.22
+Germany,DEU,False,2023,Gas,False,76.66,15.22
+Germany,DEU,False,2023,Coal,False,124.78,24.77
+Germany,DEU,False,2023,Bioenergy,False,51.26,10.18
+Germany,DEU,False,2024,Bioenergy,False,51.08,10.36
+Germany,DEU,False,2024,Coal,False,106.33,21.57
+Germany,DEU,False,2024,Gas,False,78.41,15.9
+Germany,DEU,False,2024,Hydro,False,23.83,4.83
+Germany,DEU,False,2024,Net imports,False,26.27,5.33
+Germany,DEU,False,2024,Nuclear,False,0.0,0.0
+Germany,DEU,False,2024,Other fossil,False,20.39,4.14
+Germany,DEU,False,2024,Other renewables,False,0.22,0.04
+Germany,DEU,False,2024,Solar,False,74.13,15.04
+Germany,DEU,False,2024,Wind,False,138.61,28.12

@@ -1,7 +1,7 @@
 {
   "config": {"view": {"continuousWidth": 300, "continuousHeight": 300}},
   "data": {"name": "data-c163c1e1a50886b8885900c15fb06453"},
-  "background": "#FFF1E5",
+  "background": "#FFFFFF",
   "mark": {"type": "line"},
   "encoding": {
     "x": {"field": "TIME_PERIOD", "title": "Year", "type": "ordinal"},
@@ -13,7 +13,10 @@
   },
   "title": {
     "text": "Gender Wage gap in OECD countries (2015-2023)",
-    "fontsize": 15
+    "fontSize": 17,
+    "font": "Helvetica Neue, Helvetica, Arial, sans-serif",
+    "color": "#333",
+    "anchor": "start"
   },
   "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json",
   "datasets": {

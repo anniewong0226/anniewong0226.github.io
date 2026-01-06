@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="example4.css">
+    <title>Project: Cleaner and Cheaper? Explore the Price Impact of Clean Energy Transition in Europe</title>
+<script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+
+<section class="hero">
+    <h1 class="big">Cleaner and Cheaper? Explore the Price impact of Clean Energy Transition in Europe</h1>
+    <p>Annie Wong | <a href="https://www.linkedin.com/in/annie-wong-ba9150218">LinkedIn</a> | 
+    <a href="https://www.github.com/anniewong0226">GitHub</a></p>
+     <a href="index.html">← Back to Portfolio</a>
+    <p>Europe has seen unprecedented growth in renewable energy penetration.</p>
+</section>
+
+    <section>
+        <div class="chart-description">
+            <h2>Negative Electricity Pricing has Risen in Europe</h2>
+            <p>
+                Negative pricing have become more frequent in Europe due to high renewable energy penetration. This phenomenon occurs when electricity supply exceeds demand, often during periods of high renewable generation combined with low consumption. 
+                Negative pricing means generators are willing to pay the grid operators to take excess electricity off their hands or risk being shutted completely.  
+                This is particularly common with wind and solar power, which have low marginal costs and can produce surplus energy during optimal weather conditions.</p>
+            </p>
+
+            <p>
+            In 2024, Europe is faced with a record number of negative electricity pricing hours, with Germany and Spain among the worst hit nations. While low electricity pricing benefits consumers, frequent negative pricing poses challenges for grid stability and the financial viability of traditional power plants.
+            </p>
+
+        </div>
+
+        <iframe src="europe_negative_hours_map.html" 
+                width="100%" 
+                height="700px" 
+                frameborder="0">
+        </iframe>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2>Electricity Prices Decreases with the Increase in Carbon Free Electricity Generation</h2>
+            <p>A univariate linear regression reveals a negative relationship between carbon-free electricity generation and prices across 20 European countries (p < 0.001). The model indicates that each percentage point increase in carbon-free generation is associated with a €0.82 decrease in average electricity prices. </p>
+            <p>Carbon-free penetration explains approximately 59% of the variation in country-level prices. This phenomenon can be explained by merit order effect theory, where renewables displace expensive fossil fuel generation due to low marginal costs. </p>
+            <p>Methodology: I merged the data from the two datasets: hourly prices and hourly carbon-free generation data and create a country level aggregation. The aggregation is derived from 2023-2024 data since I only have access to 2023-2024 data for carbon free energy.</p>
+            <p><strong>VIEW DATA HERE:</strong> <a href="https://github.com/anniewong0226/anniewong0226.github.io/blob/main/compressed_data.csv.gz" target="_blank">DATA</a></p>
+            <p><strong>VIEW CODE HERE:</strong> <a href="https://github.com/anniewong0226/anniewong0226.github.io/blob/main/CC10_machine_learning.ipynb" target="_blank">CODE</a></p>
+        </div>
+
+    <div class="card text-center">
+            <div class="card">
+                <figure id="price_vs_carbonfree"></figure>
+            </div>
+    </div>
+    </section>
+
+    <section>
+    <div class="container">
+        <h2>Growing renewable penetration in Europe's electricity system</h2>
+        <p>Europe has seen a significant increase in renewable energy penetration over the past decades, with renewable sources accounting for 35% in 1990 to over 60% of generation profile in 2024. With the electricity system becoming more reliant on intermittent sources, the project explores the implication of this shift on the electricity prices.</p>
+        <p><strong>VIEW CODE HERE:</strong> <a href="https://github.com/anniewong0226/anniewong0226.github.io/blob/main/CC8_Big%20data.ipynb" target="_blank">CODE</a></p>
+        <div class="card">
+            <figure id="renewable_europe"></figure>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>Intraday Electricity Price Fluctuation has Increased in the Past Decade </h2>
+        <p>Over the past decade, intraday electricity price fluctuations have increased significantly in Europe. Before 2021, prices rarely fluctuated drastically. Since 2021, price peaks usually occur during the morning and evening hours, with price troughs occurring during midday hours
+            2022 also comes with the highest price with electricity prices reaches a peak of over 280 €/MWh on average. 
+        </p>
+        <p><strong>VIEW CODE HERE:</strong> <a href="https://github.com/anniewong0226/anniewong0226.github.io/blob/main/CC8_Big%20data.ipynb" target="_blank">CODE</a></p>
+        <div class="card">
+            <figure id="hourly_prices"></figure>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>Intraday Electricity Prices Fluctuation is correlated with Carbon-Free Electricity Generation</h2>
+        <p> Intraday electricity price fluctuations are closely correlated with carbon-free electricity generation patterns. During periods of high renewable generation, such as midday for solar power, prices tend to drop significantly due to the abundance of low-cost energy. Conversely, during times of low renewable output, prices often spike in the evening as demand outstrips clean electricity supply.
+            Turning on carbon-intensive gas and coal plants to meet demand during low renewable generation periods further drives up prices due to their higher operational costs. This dynamic highlights the challenges of integrating intermittent renewable sources into the grid while maintaining price stability.
+        </p>
+        <p><strong>VIEW CODE HERE:</strong> <a href="https://github.com/anniewong0226/anniewong0226.github.io/blob/main/CC8_Big%20data.ipynb" target="_blank">CODE</a></p>
+        <div class="card">
+            <figure id="hourly_prices_cfe"></figure>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>Not All Countries Experience the Same Type of Energy transition </h2>
+        <p>
+        </p>
+        <p><strong>VIEW CODE HERE:</strong> <a href="https://github.com/anniewong0226/anniewong0226.github.io/blob/main/CC8_Big%20data.ipynb" target="_blank">CODE</a></p>
+        <div class="card">
+            <figure id="country_cluster_interactive"></figure>
+        </div>
+    </div>
+</section>
+
+<script>
+
+vegaEmbed('#price_vs_carbonfree', 'price_vs_carbonfree_interactive.json');
+vegaEmbed('#renewable_europe', '/Project_json/Europe_clean.json');
+vegaEmbed('#hourly_prices', '/CSS/Hourly_prices.json');
+vegaEmbed('#hourly_prices_cfe', '/Project_json/hourly_cfe_price.json');
+vegaEmbed('#country_cluster_interactive', 'country_cluster_interactive.json');
+</script>
+
+</body>
+</html>

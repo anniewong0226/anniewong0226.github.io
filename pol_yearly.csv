@@ -1,0 +1,51 @@
+entity,entity_code,is_aggregate_entity,date,series,is_aggregate_series,generation_twh,share_of_generation_pct
+Poland,POL,False,2020,Coal,False,107.4,68.34
+Poland,POL,False,2020,Bioenergy,False,8.35,5.31
+Poland,POL,False,2020,Wind,False,15.8,10.05
+Poland,POL,False,2020,Solar,False,1.96,1.25
+Poland,POL,False,2020,Other renewables,False,0.0,0.0
+Poland,POL,False,2020,Other fossil,False,4.23,2.69
+Poland,POL,False,2020,Net imports,False,13.27,8.44
+Poland,POL,False,2020,Hydro,False,2.12,1.35
+Poland,POL,False,2020,Gas,False,17.29,11.0
+Poland,POL,False,2020,Nuclear,False,0.0,0.0
+Poland,POL,False,2021,Nuclear,False,0.0,0.0
+Poland,POL,False,2021,Wind,False,16.23,9.08
+Poland,POL,False,2021,Solar,False,3.93,2.2
+Poland,POL,False,2021,Other renewables,False,0.0,0.0
+Poland,POL,False,2021,Other fossil,False,4.84,2.71
+Poland,POL,False,2021,Net imports,False,0.89,0.5
+Poland,POL,False,2021,Hydro,False,2.34,1.31
+Poland,POL,False,2021,Gas,False,15.82,8.85
+Poland,POL,False,2021,Coal,False,127.57,71.35
+Poland,POL,False,2021,Bioenergy,False,8.06,4.51
+Poland,POL,False,2022,Wind,False,19.78,11.08
+Poland,POL,False,2022,Solar,False,8.31,4.65
+Poland,POL,False,2022,Other renewables,False,0.0,0.0
+Poland,POL,False,2022,Other fossil,False,4.82,2.7
+Poland,POL,False,2022,Nuclear,False,0.0,0.0
+Poland,POL,False,2022,Hydro,False,1.97,1.1
+Poland,POL,False,2022,Gas,False,11.36,6.36
+Poland,POL,False,2022,Coal,False,124.73,69.84
+Poland,POL,False,2022,Bioenergy,False,7.63,4.27
+Poland,POL,False,2022,Net imports,False,-1.68,-0.94
+Poland,POL,False,2023,Other renewables,False,0.0,0.0
+Poland,POL,False,2023,Wind,False,23.11,14.05
+Poland,POL,False,2023,Solar,False,11.11,6.76
+Poland,POL,False,2023,Other fossil,False,4.32,2.63
+Poland,POL,False,2023,Nuclear,False,0.0,0.0
+Poland,POL,False,2023,Net imports,False,3.74,2.27
+Poland,POL,False,2023,Hydro,False,2.41,1.47
+Poland,POL,False,2023,Gas,False,16.49,10.03
+Poland,POL,False,2023,Coal,False,98.85,60.11
+Poland,POL,False,2023,Bioenergy,False,8.16,4.96
+Poland,POL,False,2024,Bioenergy,False,7.95,4.65
+Poland,POL,False,2024,Coal,False,93.5,54.66
+Poland,POL,False,2024,Gas,False,20.46,11.96
+Poland,POL,False,2024,Hydro,False,2.11,1.23
+Poland,POL,False,2024,Net imports,False,1.97,1.15
+Poland,POL,False,2024,Nuclear,False,0.0,0.0
+Poland,POL,False,2024,Other fossil,False,4.55,2.66
+Poland,POL,False,2024,Other renewables,False,0.0,0.0
+Poland,POL,False,2024,Solar,False,17.66,10.32
+Poland,POL,False,2024,Wind,False,24.82,14.51

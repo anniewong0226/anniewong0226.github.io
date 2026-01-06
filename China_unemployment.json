@@ -16,8 +16,8 @@
   "height": 250,
   "width": "container",
   "autosize": {"type": "fit", "contains": "padding"},
-  "background": "#FFF1E5",
-  "view": {"fill": "#FFF1E5", "strokeOpacity": 0},
+  "background": "#FFFFFF",
+  "view": {"fill": "#FFFFFF", "strokeOpacity": 0},
 
   "data": {
     "url": "https://api.economicsobservatory.com/chn/unem?vega",

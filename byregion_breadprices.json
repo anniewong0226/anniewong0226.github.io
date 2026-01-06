@@ -1,0 +1,60 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Average Bread Prices by Region Over Time",
+  "data": {
+    "url": "https://raw.githubusercontent.com/anniewong0226/anniewong0226.github.io/refs/heads/main/bread_prices_by_region.csv"
+  },
+  "transform": [
+    {
+      "filter": "datum.region <= 5"
+    },
+    {
+      "calculate": "floor(datum.quote_date / 100)",
+      "as": "year"
+    },
+    {
+      "calculate": "datum.quote_date % 100",
+      "as": "month"
+    },
+    {
+      "calculate": "datetime(datum.year, datum.month - 1, 1)",
+      "as": "date"
+    }
+  ],
+  "params": [
+    {
+      "name": "region_selection",
+      "select": {"type": "point", "fields": ["region"]},
+      "bind": "legend"
+    }
+  ],
+  "mark": "line",
+  "encoding": {
+    "x": {
+      "field": "date",
+      "type": "temporal",
+      "title": "Date"
+    },
+    "y": {
+      "field": "avg_price",
+      "type": "quantitative",
+      "title": "Average Price"
+    },
+    "color": {
+      "field": "region",
+      "type": "nominal",
+      "title": "Region"
+    },
+    "opacity": {
+      "condition": {"param": "region_selection", "value": 1},
+      "value": 0.1
+    },
+    "tooltip": [
+      {"field": "region", "type": "nominal"},
+      {"field": "date", "type": "temporal", "format": "%Y-%m"},
+      {"field": "avg_price", "type": "quantitative", "format": ".2f"}
+    ]
+  },
+  "width": 600,
+  "height": 400
+}

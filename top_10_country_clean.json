@@ -1,0 +1,57 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Top 10 Countries by Clean Energy Generation",
+  "width": 600,
+  "height": 400,
+  "data": {
+    "url": "https://raw.githubusercontent.com/anniewong0226/anniewong0226.github.io/refs/heads/main/clean_energy_by_country_year.csv",
+    "format": {"type": "csv"}
+  },
+  "params": [{
+    "name": "year_select",
+    "value": 2005,
+    "bind": {
+      "input": "range",
+      "min": 1990,
+      "max": 2024,
+      "step": 1,
+      "name": "Year: "
+    }
+  }],
+  "transform": [
+    {"calculate": "toNumber(datum.Year)", "as": "YearNum"},
+    {"calculate": "toNumber(datum['Clean Energy (%)'])", "as": "CleanPct"},
+    {"filter": "datum.YearNum == year_select"},
+    {"filter": "isValid(datum.CleanPct)"},
+    {
+      "window": [{"op": "row_number", "as": "rank"}],
+      "sort": [{"field": "CleanPct", "order": "descending"}]
+    },
+    {"filter": "datum.rank <= 10"}
+  ],
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "CleanPct",
+      "type": "quantitative",
+      "title": "Clean Energy (%)",
+      "scale": {"domain": [0, 100]}
+    },
+    "y": {
+      "field": "Country",
+      "type": "nominal",
+      "sort": "-x",
+      "title": "Country"
+    },
+    "color": {
+      "field": "CleanPct",
+      "type": "quantitative",
+      "scale": {"scheme": "greens"}
+    },
+    "tooltip": [
+      {"field": "Country", "type": "nominal"},
+      {"field": "YearNum", "type": "quantitative", "title": "Year"},
+      {"field": "CleanPct", "type": "quantitative", "format": ".2f", "title": "Clean Energy (%)"}
+    ]
+  }
+}

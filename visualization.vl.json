@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
-  "background": "#FFF1E5",
+  "background": "#FFFFFF",
   "description": "Log GDP per capita (2011 PPP, thousands) across countries over time",
   "title": {
     "text": "Economic Growth Across Major Economies (1820-2018)",

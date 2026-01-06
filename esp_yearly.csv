@@ -1,0 +1,51 @@
+entity,entity_code,is_aggregate_entity,date,series,is_aggregate_series,generation_twh,share_of_generation_pct
+Spain,ESP,False,2020,Coal,False,5.52,2.13
+Spain,ESP,False,2020,Bioenergy,False,6.14,2.37
+Spain,ESP,False,2020,Wind,False,56.44,21.75
+Spain,ESP,False,2020,Solar,False,20.67,7.97
+Spain,ESP,False,2020,Other renewables,False,0.03,0.01
+Spain,ESP,False,2020,Other fossil,False,12.12,4.67
+Spain,ESP,False,2020,Net imports,False,3.28,1.26
+Spain,ESP,False,2020,Hydro,False,30.51,11.76
+Spain,ESP,False,2020,Gas,False,69.74,26.88
+Spain,ESP,False,2020,Nuclear,False,58.3,22.47
+Spain,ESP,False,2021,Nuclear,False,56.56,20.89
+Spain,ESP,False,2021,Wind,False,62.06,22.92
+Spain,ESP,False,2021,Solar,False,27.1,10.01
+Spain,ESP,False,2021,Other renewables,False,0.02,0.01
+Spain,ESP,False,2021,Other fossil,False,12.08,4.46
+Spain,ESP,False,2021,Net imports,False,0.85,0.31
+Spain,ESP,False,2021,Hydro,False,29.63,10.94
+Spain,ESP,False,2021,Gas,False,71.5,26.41
+Spain,ESP,False,2021,Coal,False,4.86,1.8
+Spain,ESP,False,2021,Bioenergy,False,6.94,2.56
+Spain,ESP,False,2022,Wind,False,62.78,21.86
+Spain,ESP,False,2022,Solar,False,35.72,12.44
+Spain,ESP,False,2022,Other renewables,False,0.02,0.01
+Spain,ESP,False,2022,Other fossil,False,11.69,4.07
+Spain,ESP,False,2022,Nuclear,False,58.59,20.4
+Spain,ESP,False,2022,Hydro,False,17.59,6.13
+Spain,ESP,False,2022,Gas,False,86.1,29.98
+Spain,ESP,False,2022,Coal,False,7.86,2.74
+Spain,ESP,False,2022,Bioenergy,False,6.8,2.37
+Spain,ESP,False,2022,Net imports,False,-19.8,-6.9
+Spain,ESP,False,2023,Other renewables,False,0.01,0.0
+Spain,ESP,False,2023,Wind,False,65.01,23.23
+Spain,ESP,False,2023,Solar,False,48.59,17.36
+Spain,ESP,False,2023,Other fossil,False,10.48,3.74
+Spain,ESP,False,2023,Nuclear,False,56.87,20.32
+Spain,ESP,False,2023,Net imports,False,-13.96,-4.99
+Spain,ESP,False,2023,Hydro,False,25.0,8.93
+Spain,ESP,False,2023,Gas,False,64.36,23.0
+Spain,ESP,False,2023,Coal,False,3.62,1.29
+Spain,ESP,False,2023,Bioenergy,False,5.9,2.11
+Spain,ESP,False,2024,Bioenergy,False,6.17,2.19
+Spain,ESP,False,2024,Coal,False,2.58,0.92
+Spain,ESP,False,2024,Gas,False,52.34,18.58
+Spain,ESP,False,2024,Hydro,False,34.41,12.22
+Spain,ESP,False,2024,Net imports,False,-10.23,-3.63
+Spain,ESP,False,2024,Nuclear,False,54.51,19.35
+Spain,ESP,False,2024,Other fossil,False,10.41,3.7
+Spain,ESP,False,2024,Other renewables,False,0.01,0.0
+Spain,ESP,False,2024,Solar,False,58.29,20.7
+Spain,ESP,False,2024,Wind,False,62.93,22.34

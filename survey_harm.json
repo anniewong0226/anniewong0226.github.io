@@ -1,9 +1,9 @@
 {
   "config": {
-    "font": "Circular Std",
-    "background":"#FFF1E5",
+    "font": "Helvetica Neue, Helvetica, Arial, sans-serif",
+    "background": "#FFFFFF",
     "mark": {"line": {"interpolate": "monotone"}},
-    "view": {"stroke": "transparent", "width": 400, "height": 300},
+    "view": {"stroke": "transparent", "width": 500, "height": 600},
     "range": {
       "category": [
         "#36B7B4",
@@ -60,12 +60,19 @@
       "titleY": -7
     }
   },
+  "title": {
+    "text": "Perception on Tariff Differs Across Partisan Line",
+    "fontSize": 17,
+    "font": "Helvetica Neue, Helvetica, Arial, sans-serif",
+    "color": "#333",
+    "anchor": "start"
+  },
   "data": {"name": "data-315270ffa73f8ef75105854937985184"},
   "mark": {"type": "bar"},
   "encoding": {
     "color": {
       "field": "Response",
-      "legend": {"orient": "top", "title": ""},
+      "legend": {"orient": "left", "title": ""},
       "scale": {
         "domain": [
           "Strongly disagree",
@@ -97,7 +104,8 @@
     }
   },
   "height": 200,
-  "width": 475,
+  "width": "container",
+  "autosize": {"type": "fit", "contains": "padding"},
   "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json",
   "datasets": {
     "data-315270ffa73f8ef75105854937985184": [

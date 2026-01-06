@@ -1,0 +1,35 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Bread Prices",
+    "subtitle": "Mean and Median Prices for 6 Bread Rolls White/Brown from 1988-2025",
+    "fontSize": 16
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/anniewong0226/anniewong0226.github.io/refs/heads/main/avg_bread_prices_melted.csv"
+  },
+  "mark": "line",
+  "encoding": {
+    "x": {
+      "field": "date",
+      "type": "temporal",
+      "title": ""
+    },
+    "y": {
+      "field": "price",
+      "type": "quantitative",
+      "title": "Price (GBP)"
+    },
+    "color": {
+      "field": "price_type",
+      "type": "nominal"
+    },
+    "tooltip": [
+      {"field": "date", "type": "temporal", "title": "Date"},
+      {"field": "price_type", "type": "nominal", "title": "Price Type"},
+      {"field": "price", "type": "quantitative", "title": "Price (GBP)"}
+    ]
+  },
+  "width": 600,
+  "height": 400
+}

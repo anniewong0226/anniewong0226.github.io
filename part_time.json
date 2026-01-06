@@ -1,7 +1,7 @@
 {
   "config": {"view": {"continuousWidth": 300, "continuousHeight": 300}},
   "data": {"name": "data-9bb49fb221722f8b44ab1efc3d6ebffc"},
-  "background": "#FFF1E5",
+  "background": "#FFFFFF",
   "mark": {"type": "line", "point": true},
   "encoding": {
     "color": {"field": "SEX", "title": "Gender", "type": "nominal"},
@@ -13,11 +13,17 @@
     "x": {"field": "TIME_PERIOD", "title": "Year", "type": "ordinal"},
     "y": {
       "field": "OBS_VALUE",
-      "title": "Observation Value",
+      "title": "%",
       "type": "quantitative"
     }
   },
-  "title": "Gender share of part-time employment",
+  "title": {
+    "text": "Gender share of part-time employment",
+    "fontSize": 17,
+    "font": "Helvetica Neue, Helvetica, Arial, sans-serif",
+    "color": "#333",
+    "anchor": "start"
+  },
   "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json",
   "datasets": {
     "data-9bb49fb221722f8b44ab1efc3d6ebffc": [

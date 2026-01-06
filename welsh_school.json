@@ -1,13 +1,15 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title":  {
-    "text": "Distribution of Medium of Language Instruction in Welsh State Schools",
-    "fontSize": 18,
-    "anchor": "start"
+  "title": {
+    "text": ["Distribution of Medium of Language Instruction", "in Welsh State Schools"],
+    "fontSize": 16,
+    "anchor": "middle",
+    "font": "Helvetica Neue, Helvetica, Arial, sans-serif",
+    "color": "#333"
   },
-  "width": 700,
+  "width": "container",
   "height": 700,
-  "background": "#FFF1E5",
+  "background": "#FFFFFF",
   "projection": {"type": "mercator"},
   "layer": [
     {
@@ -33,14 +35,21 @@
         "color": {
           "field": "language",
           "legend": {
+            "orient": "bottom",
             "labelFontSize": 13,
-            "titleFontSize": 16
-            }
+            "titleFontSize": 16,
+            "columns": 2,
+            "symbolLimit": 0
+          }
         },
         "tooltip": [
           {"field": "language", "type": "nominal", "title": "Language"}
         ]
       }
     }
-  ]
+  ],
+  "autosize": {
+    "type": "fit",
+    "contains": "padding"
+  }
 }

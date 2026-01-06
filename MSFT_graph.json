@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
   "title": "Microsoft Stock Price (Last 100 Days)",
   "description": "Microsoft's stock price in the last 100 days.",
-  "width": 300,
+  "width": 200,
   "height": 200,
   "data": {
     "url": "https://raw.githubusercontent.com/anniewong0226/anniewong0226.github.io/refs/heads/main/MSFT_clean.csv"

@@ -1,12 +1,14 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Percentage of Scottish Only Identity by Local Authority",
-    "fontSize": 18,
-    "anchor": "start"
+    "text": ["Percentage of Scottish Only Identity", "by Local Authority in Scotland"],
+    "fontSize": 16,
+    "anchor": "middle",
+    "font": "Helvetica Neue, Helvetica, Arial, sans-serif",
+    "color": "#333"
   },
-  "background": "#FFF1E5",
-  "width": 700,
+  "background": "#FFFFFF",
+  "width": "container",
   "height": 700,
   "data": {
     "url": "https://raw.githubusercontent.com/jhellingsdata/RADataHub/refs/heads/main/MappingWorkshop/geo_data/LAD_SCT_2025_05.topojson",

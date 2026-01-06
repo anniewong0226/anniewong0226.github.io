@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json",
-  "background": "#FFF1E5",
+  "background": "#FFFFFF",
   "title": {
-    "text": "Reciprocal Tariff ",
+    "text": "US Reciprocal Tariff On Liberation Day",
     "anchor": "start",
     "fontSize": 17,
     "font": "Helvetica Neue",
