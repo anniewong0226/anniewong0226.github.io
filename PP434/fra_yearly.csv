@@ -1,0 +1,51 @@
+entity,entity_code,is_aggregate_entity,date,series,is_aggregate_series,generation_twh,share_of_generation_pct
+France,FRA,False,2020,Coal,False,3.09,0.59
+France,FRA,False,2020,Bioenergy,False,8.76,1.66
+France,FRA,False,2020,Wind,False,40.05,7.6
+France,FRA,False,2020,Solar,False,13.09,2.48
+France,FRA,False,2020,Other renewables,False,0.61,0.12
+France,FRA,False,2020,Other fossil,False,10.05,1.91
+France,FRA,False,2020,Net imports,False,-45.04,-8.54
+France,FRA,False,2020,Hydro,False,62.52,11.86
+France,FRA,False,2020,Gas,False,35.25,6.69
+France,FRA,False,2020,Nuclear,False,353.83,67.11
+France,FRA,False,2021,Nuclear,False,379.36,68.94
+France,FRA,False,2021,Wind,False,37.12,6.75
+France,FRA,False,2021,Solar,False,15.28,2.78
+France,FRA,False,2021,Other renewables,False,0.58,0.11
+France,FRA,False,2021,Other fossil,False,10.1,1.84
+France,FRA,False,2021,Net imports,False,-44.89,-8.16
+France,FRA,False,2021,Hydro,False,59.54,10.82
+France,FRA,False,2021,Gas,False,33.31,6.05
+France,FRA,False,2021,Coal,False,5.44,0.99
+France,FRA,False,2021,Bioenergy,False,9.58,1.74
+France,FRA,False,2022,Wind,False,38.0,8.12
+France,FRA,False,2022,Solar,False,19.34,4.13
+France,FRA,False,2022,Other renewables,False,0.6,0.13
+France,FRA,False,2022,Other fossil,False,10.45,2.23
+France,FRA,False,2022,Nuclear,False,294.73,62.94
+France,FRA,False,2022,Hydro,False,45.56,9.73
+France,FRA,False,2022,Gas,False,45.74,9.77
+France,FRA,False,2022,Coal,False,4.16,0.89
+France,FRA,False,2022,Bioenergy,False,9.67,2.07
+France,FRA,False,2022,Net imports,False,14.94,3.19
+France,FRA,False,2023,Other renewables,False,0.58,0.11
+France,FRA,False,2023,Wind,False,48.05,9.3
+France,FRA,False,2023,Solar,False,22.59,4.37
+France,FRA,False,2023,Other fossil,False,9.43,1.82
+France,FRA,False,2023,Nuclear,False,338.2,65.43
+France,FRA,False,2023,Net imports,False,-50.47,-9.76
+France,FRA,False,2023,Hydro,False,55.9,10.82
+France,FRA,False,2023,Gas,False,30.02,5.81
+France,FRA,False,2023,Coal,False,1.61,0.31
+France,FRA,False,2023,Bioenergy,False,10.48,2.03
+France,FRA,False,2024,Bioenergy,False,11.44,2.04
+France,FRA,False,2024,Coal,False,1.02,0.18
+France,FRA,False,2024,Gas,False,18.1,3.23
+France,FRA,False,2024,Hydro,False,71.12,12.7
+France,FRA,False,2024,Net imports,False,-89.85,-16.04
+France,FRA,False,2024,Nuclear,False,380.45,67.92
+France,FRA,False,2024,Other fossil,False,9.54,1.7
+France,FRA,False,2024,Other renewables,False,0.57,0.1
+France,FRA,False,2024,Solar,False,24.87,4.44
+France,FRA,False,2024,Wind,False,43.0,7.68

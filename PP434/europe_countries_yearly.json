@@ -1,0 +1,1545 @@
+{
+  "stats": {
+    "timestamp": "2026-01-05T07:43:37.083263Z",
+    "response_time_in_seconds": 0.251,
+    "rate_limit": "No",
+    "number_of_records": 150,
+    "query_parameters_used": {
+      "entity_code": [
+        "DEU",
+        "FRA",
+        "ITA"
+      ],
+      "start_date": [
+        "2020"
+      ],
+      "end_date": [
+        "2024"
+      ],
+      "is_aggregate_series": [
+        "false"
+      ]
+    },
+    "available_metrics": [
+      "generation_twh",
+      "share_of_generation_pct"
+    ],
+    "query_value_range": {
+      "date": {
+        "min": "2020",
+        "max": "2024"
+      },
+      "generation_twh": {
+        "min": -89.85,
+        "max": 380.45
+      },
+      "share_of_generation_pct": {
+        "min": -16.04,
+        "max": 68.94
+      }
+    },
+    "query_all_dates_value_range": {}
+  },
+  "data": [
+    {
+      "entity": "France",
+      "entity_code": "FRA",
+      "is_aggregate_entity": false,
+      "date": "2020",
+      "series": "Bioenergy",
+      "is_aggregate_series": false,
+      "generation_twh": 8.76,
+      "share_of_generation_pct": 1.66
+    },
+    {
+      "entity": "France",
+      "entity_code": "FRA",
+      "is_aggregate_entity": false,
+      "date": "2020",
+      "series": "Coal",
+      "is_aggregate_series": false,
+      "generation_twh": 3.09,
+      "share_of_generation_pct": 0.59
+    },
+    {
+      "entity": "France",
+      "entity_code": "FRA",
+      "is_aggregate_entity": false,
+      "date": "2020",
+      "series": "Gas",
+      "is_aggregate_series": false,
+      "generation_twh": 35.25,
+      "share_of_generation_pct": 6.69
+    },
+    {
+      "entity": "France",
+      "entity_code": "FRA",
+      "is_aggregate_entity": false,
+      "date": "2020",
+      "series": "Hydro",
+      "is_aggregate_series": false,
+      "generation_twh": 62.52,
+      "share_of_generation_pct": 11.86
+    },
+    {
+      "entity": "France",
+      "entity_code": "FRA",
+      "is_aggregate_entity": false,
+      "date": "2020",
+      "series": "Net imports",
+      "is_aggregate_series": false,
+      "generation_twh": -45.04,
+      "share_of_generation_pct": -8.54
+    },
+    {
+      "entity": "France",
+      "entity_code": "FRA",
+      "is_aggregate_entity": false,
+      "date": "2020",
+      "series": "Nuclear",
+      "is_aggregate_series": false,
+      "generation_twh": 353.83,
+      "share_of_generation_pct": 67.11
+    },
+    {
+      "entity": "France",
+      "entity_code": "FRA",
+      "is_aggregate_entity": false,
+      "date": "2020",
+      "series": "Other fossil",
+      "is_aggregate_series": false,
+      "generation_twh": 10.05,
+      "share_of_generation_pct": 1.91
+    },
+    {
+      "entity": "France",
+      "entity_code": "FRA",
+      "is_aggregate_entity": false,
+      "date": "2020",
+      "series": "Other renewables",
+      "is_aggregate_series": false,
+      "generation_twh": 0.61,
+      "share_of_generation_pct": 0.12
+    },
+    {
+      "entity": "France",
+      "entity_code": "FRA",
+      "is_aggregate_entity": false,
+      "date": "2020",
+      "series": "Solar",
+      "is_aggregate_series": false,
+      "generation_twh": 13.09,
+      "share_of_generation_pct": 2.48
+    },
+    {
+      "entity": "France",
+      "entity_code": "FRA",
+      "is_aggregate_entity": false,
+      "date": "2020",
+      "series": "Wind",
+      "is_aggregate_series": false,
+      "generation_twh": 40.05,
+      "share_of_generation_pct": 7.6
+    },
+    {
+      "entity": "Germany",
+      "entity_code": "DEU",
+      "is_aggregate_entity": false,
+      "date": "2020",
+      "series": "Bioenergy",
+      "is_aggregate_series": false,
+      "generation_twh": 50.93,
+      "share_of_generation_pct": 8.99
+    },
+    {
+      "entity": "Germany",
+      "entity_code": "DEU",
+      "is_aggregate_entity": false,
+      "date": "2020",
+      "series": "Coal",
+      "is_aggregate_series": false,
+      "generation_twh": 134.6,
+      "share_of_generation_pct": 23.75
+    },
+    {
+      "entity": "Germany",
+      "entity_code": "DEU",
+      "is_aggregate_entity": false,
+      "date": "2020",
+      "series": "Gas",
+      "is_aggregate_series": false,
+      "generation_twh": 95.0,
+      "share_of_generation_pct": 16.76
+    },
+    {
+      "entity": "Germany",
+      "entity_code": "DEU",
+      "is_aggregate_entity": false,
+      "date": "2020",
+      "series": "Hydro",
+      "is_aggregate_series": false,
+      "generation_twh": 18.72,
+      "share_of_generation_pct": 3.3
+    },
+    {
+      "entity": "Germany",
+      "entity_code": "DEU",
+      "is_aggregate_entity": false,
+      "date": "2020",
+      "series": "Net imports",
+      "is_aggregate_series": false,
+      "generation_twh": -19.03,
+      "share_of_generation_pct": -3.36
+    },
+    {
+      "entity": "Germany",
+      "entity_code": "DEU",
+      "is_aggregate_entity": false,
+      "date": "2020",
+      "series": "Nuclear",
+      "is_aggregate_series": false,
+      "generation_twh": 64.38,
+      "share_of_generation_pct": 11.36
+    },
+    {
+      "entity": "Germany",
+      "entity_code": "DEU",
+      "is_aggregate_entity": false,
+      "date": "2020",
+      "series": "Other fossil",
+      "is_aggregate_series": false,
+      "generation_twh": 21.28,
+      "share_of_generation_pct": 3.75
+    },
+    {
+      "entity": "Germany",
+      "entity_code": "DEU",
+      "is_aggregate_entity": false,
+      "date": "2020",
+      "series": "Other renewables",
+      "is_aggregate_series": false,
+      "generation_twh": 0.23,
+      "share_of_generation_pct": 0.04
+    },
+    {
+      "entity": "Germany",
+      "entity_code": "DEU",
+      "is_aggregate_entity": false,
+      "date": "2020",
+      "series": "Solar",
+      "is_aggregate_series": false,
+      "generation_twh": 49.5,
+      "share_of_generation_pct": 8.73
+    },
+    {
+      "entity": "Germany",
+      "entity_code": "DEU",
+      "is_aggregate_entity": false,
+      "date": "2020",
+      "series": "Wind",
+      "is_aggregate_series": false,
+      "generation_twh": 132.11,
+      "share_of_generation_pct": 23.31
+    },
+    {
+      "entity": "Italy",
+      "entity_code": "ITA",
+      "is_aggregate_entity": false,
+      "date": "2020",
+      "series": "Bioenergy",
+      "is_aggregate_series": false,
+      "generation_twh": 19.62,
+      "share_of_generation_pct": 7.09
+    },
+    {
+      "entity": "Italy",
+      "entity_code": "ITA",
+      "is_aggregate_entity": false,
+      "date": "2020",
+      "series": "Coal",
+      "is_aggregate_series": false,
+      "generation_twh": 13.38,
+      "share_of_generation_pct": 4.83
+    },
+    {
+      "entity": "Italy",
+      "entity_code": "ITA",
+      "is_aggregate_entity": false,
+      "date": "2020",
+      "series": "Gas",
+      "is_aggregate_series": false,
+      "generation_twh": 133.7,
+      "share_of_generation_pct": 48.3
+    },
+    {
+      "entity": "Italy",
+      "entity_code": "ITA",
+      "is_aggregate_entity": false,
+      "date": "2020",
+      "series": "Hydro",
+      "is_aggregate_series": false,
+      "generation_twh": 47.55,
+      "share_of_generation_pct": 17.18
+    },
+    {
+      "entity": "Italy",
+      "entity_code": "ITA",
+      "is_aggregate_entity": false,
+      "date": "2020",
+      "series": "Net imports",
+      "is_aggregate_series": false,
+      "generation_twh": 32.2,
+      "share_of_generation_pct": 11.63
+    },
+    {
+      "entity": "Italy",
+      "entity_code": "ITA",
+      "is_aggregate_entity": false,
+      "date": "2020",
+      "series": "Nuclear",
+      "is_aggregate_series": false,
+      "generation_twh": 0.0,
+      "share_of_generation_pct": 0.0
+    },
+    {
+      "entity": "Italy",
+      "entity_code": "ITA",
+      "is_aggregate_entity": false,
+      "date": "2020",
+      "series": "Other fossil",
+      "is_aggregate_series": false,
+      "generation_twh": 12.83,
+      "share_of_generation_pct": 4.63
+    },
+    {
+      "entity": "Italy",
+      "entity_code": "ITA",
+      "is_aggregate_entity": false,
+      "date": "2020",
+      "series": "Other renewables",
+      "is_aggregate_series": false,
+      "generation_twh": 6.03,
+      "share_of_generation_pct": 2.18
+    },
+    {
+      "entity": "Italy",
+      "entity_code": "ITA",
+      "is_aggregate_entity": false,
+      "date": "2020",
+      "series": "Solar",
+      "is_aggregate_series": false,
+      "generation_twh": 24.94,
+      "share_of_generation_pct": 9.01
+    },
+    {
+      "entity": "Italy",
+      "entity_code": "ITA",
+      "is_aggregate_entity": false,
+      "date": "2020",
+      "series": "Wind",
+      "is_aggregate_series": false,
+      "generation_twh": 18.76,
+      "share_of_generation_pct": 6.78
+    },
+    {
+      "entity": "France",
+      "entity_code": "FRA",
+      "is_aggregate_entity": false,
+      "date": "2021",
+      "series": "Bioenergy",
+      "is_aggregate_series": false,
+      "generation_twh": 9.58,
+      "share_of_generation_pct": 1.74
+    },
+    {
+      "entity": "France",
+      "entity_code": "FRA",
+      "is_aggregate_entity": false,
+      "date": "2021",
+      "series": "Coal",
+      "is_aggregate_series": false,
+      "generation_twh": 5.44,
+      "share_of_generation_pct": 0.99
+    },
+    {
+      "entity": "France",
+      "entity_code": "FRA",
+      "is_aggregate_entity": false,
+      "date": "2021",
+      "series": "Gas",
+      "is_aggregate_series": false,
+      "generation_twh": 33.31,
+      "share_of_generation_pct": 6.05
+    },
+    {
+      "entity": "France",
+      "entity_code": "FRA",
+      "is_aggregate_entity": false,
+      "date": "2021",
+      "series": "Hydro",
+      "is_aggregate_series": false,
+      "generation_twh": 59.54,
+      "share_of_generation_pct": 10.82
+    },
+    {
+      "entity": "France",
+      "entity_code": "FRA",
+      "is_aggregate_entity": false,
+      "date": "2021",
+      "series": "Net imports",
+      "is_aggregate_series": false,
+      "generation_twh": -44.89,
+      "share_of_generation_pct": -8.16
+    },
+    {
+      "entity": "France",
+      "entity_code": "FRA",
+      "is_aggregate_entity": false,
+      "date": "2021",
+      "series": "Nuclear",
+      "is_aggregate_series": false,
+      "generation_twh": 379.36,
+      "share_of_generation_pct": 68.94
+    },
+    {
+      "entity": "France",
+      "entity_code": "FRA",
+      "is_aggregate_entity": false,
+      "date": "2021",
+      "series": "Other fossil",
+      "is_aggregate_series": false,
+      "generation_twh": 10.1,
+      "share_of_generation_pct": 1.84
+    },
+    {
+      "entity": "France",
+      "entity_code": "FRA",
+      "is_aggregate_entity": false,
+      "date": "2021",
+      "series": "Other renewables",
+      "is_aggregate_series": false,
+      "generation_twh": 0.58,
+      "share_of_generation_pct": 0.11
+    },
+    {
+      "entity": "France",
+      "entity_code": "FRA",
+      "is_aggregate_entity": false,
+      "date": "2021",
+      "series": "Solar",
+      "is_aggregate_series": false,
+      "generation_twh": 15.28,
+      "share_of_generation_pct": 2.78
+    },
+    {
+      "entity": "France",
+      "entity_code": "FRA",
+      "is_aggregate_entity": false,
+      "date": "2021",
+      "series": "Wind",
+      "is_aggregate_series": false,
+      "generation_twh": 37.12,
+      "share_of_generation_pct": 6.75
+    },
+    {
+      "entity": "Germany",
+      "entity_code": "DEU",
+      "is_aggregate_entity": false,
+      "date": "2021",
+      "series": "Bioenergy",
+      "is_aggregate_series": false,
+      "generation_twh": 49.1,
+      "share_of_generation_pct": 8.48
+    },
+    {
+      "entity": "Germany",
+      "entity_code": "DEU",
+      "is_aggregate_entity": false,
+      "date": "2021",
+      "series": "Coal",
+      "is_aggregate_series": false,
+      "generation_twh": 164.65,
+      "share_of_generation_pct": 28.45
+    },
+    {
+      "entity": "Germany",
+      "entity_code": "DEU",
+      "is_aggregate_entity": false,
+      "date": "2021",
+      "series": "Gas",
+      "is_aggregate_series": false,
+      "generation_twh": 90.31,
+      "share_of_generation_pct": 15.6
+    },
+    {
+      "entity": "Germany",
+      "entity_code": "DEU",
+      "is_aggregate_entity": false,
+      "date": "2021",
+      "series": "Hydro",
+      "is_aggregate_series": false,
+      "generation_twh": 19.66,
+      "share_of_generation_pct": 3.4
+    },
+    {
+      "entity": "Germany",
+      "entity_code": "DEU",
+      "is_aggregate_entity": false,
+      "date": "2021",
+      "series": "Net imports",
+      "is_aggregate_series": false,
+      "generation_twh": -18.58,
+      "share_of_generation_pct": -3.21
+    },
+    {
+      "entity": "Germany",
+      "entity_code": "DEU",
+      "is_aggregate_entity": false,
+      "date": "2021",
+      "series": "Nuclear",
+      "is_aggregate_series": false,
+      "generation_twh": 69.13,
+      "share_of_generation_pct": 11.94
+    },
+    {
+      "entity": "Germany",
+      "entity_code": "DEU",
+      "is_aggregate_entity": false,
+      "date": "2021",
+      "series": "Other fossil",
+      "is_aggregate_series": false,
+      "generation_twh": 22.24,
+      "share_of_generation_pct": 3.84
+    },
+    {
+      "entity": "Germany",
+      "entity_code": "DEU",
+      "is_aggregate_entity": false,
+      "date": "2021",
+      "series": "Other renewables",
+      "is_aggregate_series": false,
+      "generation_twh": 0.24,
+      "share_of_generation_pct": 0.04
+    },
+    {
+      "entity": "Germany",
+      "entity_code": "DEU",
+      "is_aggregate_entity": false,
+      "date": "2021",
+      "series": "Solar",
+      "is_aggregate_series": false,
+      "generation_twh": 49.34,
+      "share_of_generation_pct": 8.52
+    },
+    {
+      "entity": "Germany",
+      "entity_code": "DEU",
+      "is_aggregate_entity": false,
+      "date": "2021",
+      "series": "Wind",
+      "is_aggregate_series": false,
+      "generation_twh": 114.16,
+      "share_of_generation_pct": 19.72
+    },
+    {
+      "entity": "Italy",
+      "entity_code": "ITA",
+      "is_aggregate_entity": false,
+      "date": "2021",
+      "series": "Bioenergy",
+      "is_aggregate_series": false,
+      "generation_twh": 19.06,
+      "share_of_generation_pct": 6.68
+    },
+    {
+      "entity": "Italy",
+      "entity_code": "ITA",
+      "is_aggregate_entity": false,
+      "date": "2021",
+      "series": "Coal",
+      "is_aggregate_series": false,
+      "generation_twh": 14.02,
+      "share_of_generation_pct": 4.91
+    },
+    {
+      "entity": "Italy",
+      "entity_code": "ITA",
+      "is_aggregate_entity": false,
+      "date": "2021",
+      "series": "Gas",
+      "is_aggregate_series": false,
+      "generation_twh": 144.01,
+      "share_of_generation_pct": 50.44
+    },
+    {
+      "entity": "Italy",
+      "entity_code": "ITA",
+      "is_aggregate_entity": false,
+      "date": "2021",
+      "series": "Hydro",
+      "is_aggregate_series": false,
+      "generation_twh": 45.39,
+      "share_of_generation_pct": 15.9
+    },
+    {
+      "entity": "Italy",
+      "entity_code": "ITA",
+      "is_aggregate_entity": false,
+      "date": "2021",
+      "series": "Net imports",
+      "is_aggregate_series": false,
+      "generation_twh": 42.79,
+      "share_of_generation_pct": 14.99
+    },
+    {
+      "entity": "Italy",
+      "entity_code": "ITA",
+      "is_aggregate_entity": false,
+      "date": "2021",
+      "series": "Nuclear",
+      "is_aggregate_series": false,
+      "generation_twh": 0.0,
+      "share_of_generation_pct": 0.0
+    },
+    {
+      "entity": "Italy",
+      "entity_code": "ITA",
+      "is_aggregate_entity": false,
+      "date": "2021",
+      "series": "Other fossil",
+      "is_aggregate_series": false,
+      "generation_twh": 11.13,
+      "share_of_generation_pct": 3.9
+    },
+    {
+      "entity": "Italy",
+      "entity_code": "ITA",
+      "is_aggregate_entity": false,
+      "date": "2021",
+      "series": "Other renewables",
+      "is_aggregate_series": false,
+      "generation_twh": 5.91,
+      "share_of_generation_pct": 2.07
+    },
+    {
+      "entity": "Italy",
+      "entity_code": "ITA",
+      "is_aggregate_entity": false,
+      "date": "2021",
+      "series": "Solar",
+      "is_aggregate_series": false,
+      "generation_twh": 25.04,
+      "share_of_generation_pct": 8.77
+    },
+    {
+      "entity": "Italy",
+      "entity_code": "ITA",
+      "is_aggregate_entity": false,
+      "date": "2021",
+      "series": "Wind",
+      "is_aggregate_series": false,
+      "generation_twh": 20.93,
+      "share_of_generation_pct": 7.33
+    },
+    {
+      "entity": "France",
+      "entity_code": "FRA",
+      "is_aggregate_entity": false,
+      "date": "2022",
+      "series": "Bioenergy",
+      "is_aggregate_series": false,
+      "generation_twh": 9.67,
+      "share_of_generation_pct": 2.07
+    },
+    {
+      "entity": "France",
+      "entity_code": "FRA",
+      "is_aggregate_entity": false,
+      "date": "2022",
+      "series": "Coal",
+      "is_aggregate_series": false,
+      "generation_twh": 4.16,
+      "share_of_generation_pct": 0.89
+    },
+    {
+      "entity": "France",
+      "entity_code": "FRA",
+      "is_aggregate_entity": false,
+      "date": "2022",
+      "series": "Gas",
+      "is_aggregate_series": false,
+      "generation_twh": 45.74,
+      "share_of_generation_pct": 9.77
+    },
+    {
+      "entity": "France",
+      "entity_code": "FRA",
+      "is_aggregate_entity": false,
+      "date": "2022",
+      "series": "Hydro",
+      "is_aggregate_series": false,
+      "generation_twh": 45.56,
+      "share_of_generation_pct": 9.73
+    },
+    {
+      "entity": "France",
+      "entity_code": "FRA",
+      "is_aggregate_entity": false,
+      "date": "2022",
+      "series": "Net imports",
+      "is_aggregate_series": false,
+      "generation_twh": 14.94,
+      "share_of_generation_pct": 3.19
+    },
+    {
+      "entity": "France",
+      "entity_code": "FRA",
+      "is_aggregate_entity": false,
+      "date": "2022",
+      "series": "Nuclear",
+      "is_aggregate_series": false,
+      "generation_twh": 294.73,
+      "share_of_generation_pct": 62.94
+    },
+    {
+      "entity": "France",
+      "entity_code": "FRA",
+      "is_aggregate_entity": false,
+      "date": "2022",
+      "series": "Other fossil",
+      "is_aggregate_series": false,
+      "generation_twh": 10.45,
+      "share_of_generation_pct": 2.23
+    },
+    {
+      "entity": "France",
+      "entity_code": "FRA",
+      "is_aggregate_entity": false,
+      "date": "2022",
+      "series": "Other renewables",
+      "is_aggregate_series": false,
+      "generation_twh": 0.6,
+      "share_of_generation_pct": 0.13
+    },
+    {
+      "entity": "France",
+      "entity_code": "FRA",
+      "is_aggregate_entity": false,
+      "date": "2022",
+      "series": "Solar",
+      "is_aggregate_series": false,
+      "generation_twh": 19.34,
+      "share_of_generation_pct": 4.13
+    },
+    {
+      "entity": "France",
+      "entity_code": "FRA",
+      "is_aggregate_entity": false,
+      "date": "2022",
+      "series": "Wind",
+      "is_aggregate_series": false,
+      "generation_twh": 38.0,
+      "share_of_generation_pct": 8.12
+    },
+    {
+      "entity": "Germany",
+      "entity_code": "DEU",
+      "is_aggregate_entity": false,
+      "date": "2022",
+      "series": "Bioenergy",
+      "is_aggregate_series": false,
+      "generation_twh": 48.6,
+      "share_of_generation_pct": 8.57
+    },
+    {
+      "entity": "Germany",
+      "entity_code": "DEU",
+      "is_aggregate_entity": false,
+      "date": "2022",
+      "series": "Coal",
+      "is_aggregate_series": false,
+      "generation_twh": 179.93,
+      "share_of_generation_pct": 31.74
+    },
+    {
+      "entity": "Germany",
+      "entity_code": "DEU",
+      "is_aggregate_entity": false,
+      "date": "2022",
+      "series": "Gas",
+      "is_aggregate_series": false,
+      "generation_twh": 79.05,
+      "share_of_generation_pct": 13.94
+    },
+    {
+      "entity": "Germany",
+      "entity_code": "DEU",
+      "is_aggregate_entity": false,
+      "date": "2022",
+      "series": "Hydro",
+      "is_aggregate_series": false,
+      "generation_twh": 17.62,
+      "share_of_generation_pct": 3.11
+    },
+    {
+      "entity": "Germany",
+      "entity_code": "DEU",
+      "is_aggregate_entity": false,
+      "date": "2022",
+      "series": "Net imports",
+      "is_aggregate_series": false,
+      "generation_twh": -27.26,
+      "share_of_generation_pct": -4.81
+    },
+    {
+      "entity": "Germany",
+      "entity_code": "DEU",
+      "is_aggregate_entity": false,
+      "date": "2022",
+      "series": "Nuclear",
+      "is_aggregate_series": false,
+      "generation_twh": 34.71,
+      "share_of_generation_pct": 6.12
+    },
+    {
+      "entity": "Germany",
+      "entity_code": "DEU",
+      "is_aggregate_entity": false,
+      "date": "2022",
+      "series": "Other fossil",
+      "is_aggregate_series": false,
+      "generation_twh": 21.65,
+      "share_of_generation_pct": 3.82
+    },
+    {
+      "entity": "Germany",
+      "entity_code": "DEU",
+      "is_aggregate_entity": false,
+      "date": "2022",
+      "series": "Other renewables",
+      "is_aggregate_series": false,
+      "generation_twh": 0.21,
+      "share_of_generation_pct": 0.04
+    },
+    {
+      "entity": "Germany",
+      "entity_code": "DEU",
+      "is_aggregate_entity": false,
+      "date": "2022",
+      "series": "Solar",
+      "is_aggregate_series": false,
+      "generation_twh": 60.3,
+      "share_of_generation_pct": 10.64
+    },
+    {
+      "entity": "Germany",
+      "entity_code": "DEU",
+      "is_aggregate_entity": false,
+      "date": "2022",
+      "series": "Wind",
+      "is_aggregate_series": false,
+      "generation_twh": 124.81,
+      "share_of_generation_pct": 22.02
+    },
+    {
+      "entity": "Italy",
+      "entity_code": "ITA",
+      "is_aggregate_entity": false,
+      "date": "2022",
+      "series": "Bioenergy",
+      "is_aggregate_series": false,
+      "generation_twh": 17.61,
+      "share_of_generation_pct": 6.29
+    },
+    {
+      "entity": "Italy",
+      "entity_code": "ITA",
+      "is_aggregate_entity": false,
+      "date": "2022",
+      "series": "Coal",
+      "is_aggregate_series": false,
+      "generation_twh": 22.61,
+      "share_of_generation_pct": 8.07
+    },
+    {
+      "entity": "Italy",
+      "entity_code": "ITA",
+      "is_aggregate_entity": false,
+      "date": "2022",
+      "series": "Gas",
+      "is_aggregate_series": false,
+      "generation_twh": 141.47,
+      "share_of_generation_pct": 50.49
+    },
+    {
+      "entity": "Italy",
+      "entity_code": "ITA",
+      "is_aggregate_entity": false,
+      "date": "2022",
+      "series": "Hydro",
+      "is_aggregate_series": false,
+      "generation_twh": 28.4,
+      "share_of_generation_pct": 10.14
+    },
+    {
+      "entity": "Italy",
+      "entity_code": "ITA",
+      "is_aggregate_entity": false,
+      "date": "2022",
+      "series": "Net imports",
+      "is_aggregate_series": false,
+      "generation_twh": 42.99,
+      "share_of_generation_pct": 15.34
+    },
+    {
+      "entity": "Italy",
+      "entity_code": "ITA",
+      "is_aggregate_entity": false,
+      "date": "2022",
+      "series": "Nuclear",
+      "is_aggregate_series": false,
+      "generation_twh": 0.0,
+      "share_of_generation_pct": 0.0
+    },
+    {
+      "entity": "Italy",
+      "entity_code": "ITA",
+      "is_aggregate_entity": false,
+      "date": "2022",
+      "series": "Other fossil",
+      "is_aggregate_series": false,
+      "generation_twh": 15.63,
+      "share_of_generation_pct": 5.58
+    },
+    {
+      "entity": "Italy",
+      "entity_code": "ITA",
+      "is_aggregate_entity": false,
+      "date": "2022",
+      "series": "Other renewables",
+      "is_aggregate_series": false,
+      "generation_twh": 5.84,
+      "share_of_generation_pct": 2.08
+    },
+    {
+      "entity": "Italy",
+      "entity_code": "ITA",
+      "is_aggregate_entity": false,
+      "date": "2022",
+      "series": "Solar",
+      "is_aggregate_series": false,
+      "generation_twh": 28.12,
+      "share_of_generation_pct": 10.04
+    },
+    {
+      "entity": "Italy",
+      "entity_code": "ITA",
+      "is_aggregate_entity": false,
+      "date": "2022",
+      "series": "Wind",
+      "is_aggregate_series": false,
+      "generation_twh": 20.49,
+      "share_of_generation_pct": 7.31
+    },
+    {
+      "entity": "France",
+      "entity_code": "FRA",
+      "is_aggregate_entity": false,
+      "date": "2023",
+      "series": "Bioenergy",
+      "is_aggregate_series": false,
+      "generation_twh": 10.48,
+      "share_of_generation_pct": 2.03
+    },
+    {
+      "entity": "France",
+      "entity_code": "FRA",
+      "is_aggregate_entity": false,
+      "date": "2023",
+      "series": "Coal",
+      "is_aggregate_series": false,
+      "generation_twh": 1.61,
+      "share_of_generation_pct": 0.31
+    },
+    {
+      "entity": "France",
+      "entity_code": "FRA",
+      "is_aggregate_entity": false,
+      "date": "2023",
+      "series": "Gas",
+      "is_aggregate_series": false,
+      "generation_twh": 30.02,
+      "share_of_generation_pct": 5.81
+    },
+    {
+      "entity": "France",
+      "entity_code": "FRA",
+      "is_aggregate_entity": false,
+      "date": "2023",
+      "series": "Hydro",
+      "is_aggregate_series": false,
+      "generation_twh": 55.9,
+      "share_of_generation_pct": 10.82
+    },
+    {
+      "entity": "France",
+      "entity_code": "FRA",
+      "is_aggregate_entity": false,
+      "date": "2023",
+      "series": "Net imports",
+      "is_aggregate_series": false,
+      "generation_twh": -50.47,
+      "share_of_generation_pct": -9.76
+    },
+    {
+      "entity": "France",
+      "entity_code": "FRA",
+      "is_aggregate_entity": false,
+      "date": "2023",
+      "series": "Nuclear",
+      "is_aggregate_series": false,
+      "generation_twh": 338.2,
+      "share_of_generation_pct": 65.43
+    },
+    {
+      "entity": "France",
+      "entity_code": "FRA",
+      "is_aggregate_entity": false,
+      "date": "2023",
+      "series": "Other fossil",
+      "is_aggregate_series": false,
+      "generation_twh": 9.43,
+      "share_of_generation_pct": 1.82
+    },
+    {
+      "entity": "France",
+      "entity_code": "FRA",
+      "is_aggregate_entity": false,
+      "date": "2023",
+      "series": "Other renewables",
+      "is_aggregate_series": false,
+      "generation_twh": 0.58,
+      "share_of_generation_pct": 0.11
+    },
+    {
+      "entity": "France",
+      "entity_code": "FRA",
+      "is_aggregate_entity": false,
+      "date": "2023",
+      "series": "Solar",
+      "is_aggregate_series": false,
+      "generation_twh": 22.59,
+      "share_of_generation_pct": 4.37
+    },
+    {
+      "entity": "France",
+      "entity_code": "FRA",
+      "is_aggregate_entity": false,
+      "date": "2023",
+      "series": "Wind",
+      "is_aggregate_series": false,
+      "generation_twh": 48.05,
+      "share_of_generation_pct": 9.3
+    },
+    {
+      "entity": "Germany",
+      "entity_code": "DEU",
+      "is_aggregate_entity": false,
+      "date": "2023",
+      "series": "Bioenergy",
+      "is_aggregate_series": false,
+      "generation_twh": 51.26,
+      "share_of_generation_pct": 10.18
+    },
+    {
+      "entity": "Germany",
+      "entity_code": "DEU",
+      "is_aggregate_entity": false,
+      "date": "2023",
+      "series": "Coal",
+      "is_aggregate_series": false,
+      "generation_twh": 124.78,
+      "share_of_generation_pct": 24.77
+    },
+    {
+      "entity": "Germany",
+      "entity_code": "DEU",
+      "is_aggregate_entity": false,
+      "date": "2023",
+      "series": "Gas",
+      "is_aggregate_series": false,
+      "generation_twh": 76.66,
+      "share_of_generation_pct": 15.22
+    },
+    {
+      "entity": "Germany",
+      "entity_code": "DEU",
+      "is_aggregate_entity": false,
+      "date": "2023",
+      "series": "Hydro",
+      "is_aggregate_series": false,
+      "generation_twh": 21.24,
+      "share_of_generation_pct": 4.22
+    },
+    {
+      "entity": "Germany",
+      "entity_code": "DEU",
+      "is_aggregate_entity": false,
+      "date": "2023",
+      "series": "Net imports",
+      "is_aggregate_series": false,
+      "generation_twh": 9.22,
+      "share_of_generation_pct": 1.83
+    },
+    {
+      "entity": "Germany",
+      "entity_code": "DEU",
+      "is_aggregate_entity": false,
+      "date": "2023",
+      "series": "Nuclear",
+      "is_aggregate_series": false,
+      "generation_twh": 7.22,
+      "share_of_generation_pct": 1.43
+    },
+    {
+      "entity": "Germany",
+      "entity_code": "DEU",
+      "is_aggregate_entity": false,
+      "date": "2023",
+      "series": "Other fossil",
+      "is_aggregate_series": false,
+      "generation_twh": 20.96,
+      "share_of_generation_pct": 4.16
+    },
+    {
+      "entity": "Germany",
+      "entity_code": "DEU",
+      "is_aggregate_entity": false,
+      "date": "2023",
+      "series": "Other renewables",
+      "is_aggregate_series": false,
+      "generation_twh": 0.19,
+      "share_of_generation_pct": 0.04
+    },
+    {
+      "entity": "Germany",
+      "entity_code": "DEU",
+      "is_aggregate_entity": false,
+      "date": "2023",
+      "series": "Solar",
+      "is_aggregate_series": false,
+      "generation_twh": 63.87,
+      "share_of_generation_pct": 12.68
+    },
+    {
+      "entity": "Germany",
+      "entity_code": "DEU",
+      "is_aggregate_entity": false,
+      "date": "2023",
+      "series": "Wind",
+      "is_aggregate_series": false,
+      "generation_twh": 137.51,
+      "share_of_generation_pct": 27.3
+    },
+    {
+      "entity": "Italy",
+      "entity_code": "ITA",
+      "is_aggregate_entity": false,
+      "date": "2023",
+      "series": "Bioenergy",
+      "is_aggregate_series": false,
+      "generation_twh": 16.01,
+      "share_of_generation_pct": 6.12
+    },
+    {
+      "entity": "Italy",
+      "entity_code": "ITA",
+      "is_aggregate_entity": false,
+      "date": "2023",
+      "series": "Coal",
+      "is_aggregate_series": false,
+      "generation_twh": 13.22,
+      "share_of_generation_pct": 5.06
+    },
+    {
+      "entity": "Italy",
+      "entity_code": "ITA",
+      "is_aggregate_entity": false,
+      "date": "2023",
+      "series": "Gas",
+      "is_aggregate_series": false,
+      "generation_twh": 119.02,
+      "share_of_generation_pct": 45.51
+    },
+    {
+      "entity": "Italy",
+      "entity_code": "ITA",
+      "is_aggregate_entity": false,
+      "date": "2023",
+      "series": "Hydro",
+      "is_aggregate_series": false,
+      "generation_twh": 40.52,
+      "share_of_generation_pct": 15.5
+    },
+    {
+      "entity": "Italy",
+      "entity_code": "ITA",
+      "is_aggregate_entity": false,
+      "date": "2023",
+      "series": "Net imports",
+      "is_aggregate_series": false,
+      "generation_twh": 51.25,
+      "share_of_generation_pct": 19.6
+    },
+    {
+      "entity": "Italy",
+      "entity_code": "ITA",
+      "is_aggregate_entity": false,
+      "date": "2023",
+      "series": "Nuclear",
+      "is_aggregate_series": false,
+      "generation_twh": 0.0,
+      "share_of_generation_pct": 0.0
+    },
+    {
+      "entity": "Italy",
+      "entity_code": "ITA",
+      "is_aggregate_entity": false,
+      "date": "2023",
+      "series": "Other fossil",
+      "is_aggregate_series": false,
+      "generation_twh": 12.79,
+      "share_of_generation_pct": 4.89
+    },
+    {
+      "entity": "Italy",
+      "entity_code": "ITA",
+      "is_aggregate_entity": false,
+      "date": "2023",
+      "series": "Other renewables",
+      "is_aggregate_series": false,
+      "generation_twh": 5.69,
+      "share_of_generation_pct": 2.18
+    },
+    {
+      "entity": "Italy",
+      "entity_code": "ITA",
+      "is_aggregate_entity": false,
+      "date": "2023",
+      "series": "Solar",
+      "is_aggregate_series": false,
+      "generation_twh": 30.71,
+      "share_of_generation_pct": 11.74
+    },
+    {
+      "entity": "Italy",
+      "entity_code": "ITA",
+      "is_aggregate_entity": false,
+      "date": "2023",
+      "series": "Wind",
+      "is_aggregate_series": false,
+      "generation_twh": 23.54,
+      "share_of_generation_pct": 9.0
+    },
+    {
+      "entity": "France",
+      "entity_code": "FRA",
+      "is_aggregate_entity": false,
+      "date": "2024",
+      "series": "Bioenergy",
+      "is_aggregate_series": false,
+      "generation_twh": 11.44,
+      "share_of_generation_pct": 2.04
+    },
+    {
+      "entity": "France",
+      "entity_code": "FRA",
+      "is_aggregate_entity": false,
+      "date": "2024",
+      "series": "Coal",
+      "is_aggregate_series": false,
+      "generation_twh": 1.02,
+      "share_of_generation_pct": 0.18
+    },
+    {
+      "entity": "France",
+      "entity_code": "FRA",
+      "is_aggregate_entity": false,
+      "date": "2024",
+      "series": "Gas",
+      "is_aggregate_series": false,
+      "generation_twh": 18.1,
+      "share_of_generation_pct": 3.23
+    },
+    {
+      "entity": "France",
+      "entity_code": "FRA",
+      "is_aggregate_entity": false,
+      "date": "2024",
+      "series": "Hydro",
+      "is_aggregate_series": false,
+      "generation_twh": 71.12,
+      "share_of_generation_pct": 12.7
+    },
+    {
+      "entity": "France",
+      "entity_code": "FRA",
+      "is_aggregate_entity": false,
+      "date": "2024",
+      "series": "Net imports",
+      "is_aggregate_series": false,
+      "generation_twh": -89.85,
+      "share_of_generation_pct": -16.04
+    },
+    {
+      "entity": "France",
+      "entity_code": "FRA",
+      "is_aggregate_entity": false,
+      "date": "2024",
+      "series": "Nuclear",
+      "is_aggregate_series": false,
+      "generation_twh": 380.45,
+      "share_of_generation_pct": 67.92
+    },
+    {
+      "entity": "France",
+      "entity_code": "FRA",
+      "is_aggregate_entity": false,
+      "date": "2024",
+      "series": "Other fossil",
+      "is_aggregate_series": false,
+      "generation_twh": 9.54,
+      "share_of_generation_pct": 1.7
+    },
+    {
+      "entity": "France",
+      "entity_code": "FRA",
+      "is_aggregate_entity": false,
+      "date": "2024",
+      "series": "Other renewables",
+      "is_aggregate_series": false,
+      "generation_twh": 0.57,
+      "share_of_generation_pct": 0.1
+    },
+    {
+      "entity": "France",
+      "entity_code": "FRA",
+      "is_aggregate_entity": false,
+      "date": "2024",
+      "series": "Solar",
+      "is_aggregate_series": false,
+      "generation_twh": 24.87,
+      "share_of_generation_pct": 4.44
+    },
+    {
+      "entity": "France",
+      "entity_code": "FRA",
+      "is_aggregate_entity": false,
+      "date": "2024",
+      "series": "Wind",
+      "is_aggregate_series": false,
+      "generation_twh": 43.0,
+      "share_of_generation_pct": 7.68
+    },
+    {
+      "entity": "Germany",
+      "entity_code": "DEU",
+      "is_aggregate_entity": false,
+      "date": "2024",
+      "series": "Bioenergy",
+      "is_aggregate_series": false,
+      "generation_twh": 51.08,
+      "share_of_generation_pct": 10.36
+    },
+    {
+      "entity": "Germany",
+      "entity_code": "DEU",
+      "is_aggregate_entity": false,
+      "date": "2024",
+      "series": "Coal",
+      "is_aggregate_series": false,
+      "generation_twh": 106.33,
+      "share_of_generation_pct": 21.57
+    },
+    {
+      "entity": "Germany",
+      "entity_code": "DEU",
+      "is_aggregate_entity": false,
+      "date": "2024",
+      "series": "Gas",
+      "is_aggregate_series": false,
+      "generation_twh": 78.41,
+      "share_of_generation_pct": 15.9
+    },
+    {
+      "entity": "Germany",
+      "entity_code": "DEU",
+      "is_aggregate_entity": false,
+      "date": "2024",
+      "series": "Hydro",
+      "is_aggregate_series": false,
+      "generation_twh": 23.83,
+      "share_of_generation_pct": 4.83
+    },
+    {
+      "entity": "Germany",
+      "entity_code": "DEU",
+      "is_aggregate_entity": false,
+      "date": "2024",
+      "series": "Net imports",
+      "is_aggregate_series": false,
+      "generation_twh": 26.27,
+      "share_of_generation_pct": 5.33
+    },
+    {
+      "entity": "Germany",
+      "entity_code": "DEU",
+      "is_aggregate_entity": false,
+      "date": "2024",
+      "series": "Nuclear",
+      "is_aggregate_series": false,
+      "generation_twh": 0.0,
+      "share_of_generation_pct": 0.0
+    },
+    {
+      "entity": "Germany",
+      "entity_code": "DEU",
+      "is_aggregate_entity": false,
+      "date": "2024",
+      "series": "Other fossil",
+      "is_aggregate_series": false,
+      "generation_twh": 20.39,
+      "share_of_generation_pct": 4.14
+    },
+    {
+      "entity": "Germany",
+      "entity_code": "DEU",
+      "is_aggregate_entity": false,
+      "date": "2024",
+      "series": "Other renewables",
+      "is_aggregate_series": false,
+      "generation_twh": 0.22,
+      "share_of_generation_pct": 0.04
+    },
+    {
+      "entity": "Germany",
+      "entity_code": "DEU",
+      "is_aggregate_entity": false,
+      "date": "2024",
+      "series": "Solar",
+      "is_aggregate_series": false,
+      "generation_twh": 74.13,
+      "share_of_generation_pct": 15.04
+    },
+    {
+      "entity": "Germany",
+      "entity_code": "DEU",
+      "is_aggregate_entity": false,
+      "date": "2024",
+      "series": "Wind",
+      "is_aggregate_series": false,
+      "generation_twh": 138.61,
+      "share_of_generation_pct": 28.12
+    },
+    {
+      "entity": "Italy",
+      "entity_code": "ITA",
+      "is_aggregate_entity": false,
+      "date": "2024",
+      "series": "Bioenergy",
+      "is_aggregate_series": false,
+      "generation_twh": 17.23,
+      "share_of_generation_pct": 6.44
+    },
+    {
+      "entity": "Italy",
+      "entity_code": "ITA",
+      "is_aggregate_entity": false,
+      "date": "2024",
+      "series": "Coal",
+      "is_aggregate_series": false,
+      "generation_twh": 3.95,
+      "share_of_generation_pct": 1.48
+    },
+    {
+      "entity": "Italy",
+      "entity_code": "ITA",
+      "is_aggregate_entity": false,
+      "date": "2024",
+      "series": "Gas",
+      "is_aggregate_series": false,
+      "generation_twh": 118.59,
+      "share_of_generation_pct": 44.33
+    },
+    {
+      "entity": "Italy",
+      "entity_code": "ITA",
+      "is_aggregate_entity": false,
+      "date": "2024",
+      "series": "Hydro",
+      "is_aggregate_series": false,
+      "generation_twh": 53.13,
+      "share_of_generation_pct": 19.86
+    },
+    {
+      "entity": "Italy",
+      "entity_code": "ITA",
+      "is_aggregate_entity": false,
+      "date": "2024",
+      "series": "Net imports",
+      "is_aggregate_series": false,
+      "generation_twh": 51.0,
+      "share_of_generation_pct": 19.06
+    },
+    {
+      "entity": "Italy",
+      "entity_code": "ITA",
+      "is_aggregate_entity": false,
+      "date": "2024",
+      "series": "Nuclear",
+      "is_aggregate_series": false,
+      "generation_twh": 0.0,
+      "share_of_generation_pct": 0.0
+    },
+    {
+      "entity": "Italy",
+      "entity_code": "ITA",
+      "is_aggregate_entity": false,
+      "date": "2024",
+      "series": "Other fossil",
+      "is_aggregate_series": false,
+      "generation_twh": 10.78,
+      "share_of_generation_pct": 4.03
+    },
+    {
+      "entity": "Italy",
+      "entity_code": "ITA",
+      "is_aggregate_entity": false,
+      "date": "2024",
+      "series": "Other renewables",
+      "is_aggregate_series": false,
+      "generation_twh": 5.67,
+      "share_of_generation_pct": 2.12
+    },
+    {
+      "entity": "Italy",
+      "entity_code": "ITA",
+      "is_aggregate_entity": false,
+      "date": "2024",
+      "series": "Solar",
+      "is_aggregate_series": false,
+      "generation_twh": 35.99,
+      "share_of_generation_pct": 13.45
+    },
+    {
+      "entity": "Italy",
+      "entity_code": "ITA",
+      "is_aggregate_entity": false,
+      "date": "2024",
+      "series": "Wind",
+      "is_aggregate_series": false,
+      "generation_twh": 22.17,
+      "share_of_generation_pct": 8.29
+    }
+  ]
+}

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html> 
+<head>    
+<link rel="stylesheet" type="text/css" href="example4.css">
+<title>Annie's Portfolio</title>
+<script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body> 
+
+<!-- Hero Section -->
+<section class="hero">
+    <h1 class="big">Lok Yan Annie Wong</h1>
+    <p>Annie Wong | <a href="https://www.linkedin.com/in/annie-wong-ba9150218">LinkedIn</a> | 
+    <a href="https://www.github.com/anniewong0226">GitHub</a></p>
+    <a href="project.html">Project</a></p>
+    <p>This website is a collection of my data visualizations and machine learning projects for the course PP434 at London School of Economics.</p>
+</section>
+
+<!-- Coding Challenge 1 -->
+<section>
+    <div class="container">
+        <h2>Coding Challenge 1: Display charts in your own site</h2>
+        <p>The first task is to embed vega-lite charts on a webpage using vega-embed library.</p>
+        
+        <div class="two-column">
+            <div class="card">
+                <figure id="Location1"></figure>
+            </div>
+            <div class="card">
+                <figure id="Location2"></figure>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Coding Challenge 2 -->
+<section>
+    <div class="container">
+        <h2>Coding Challenge 2: Building. Create your own visualisations</h2>
+        <p>The second task is to embed vega-lite charts using two graphs from the Economics Observatory data hub.</p>
+        <p><strong>VIEW DATA HERE:</strong> <a href="https://www.economicsobservatory.com/create" target="_blank">DATA</a></p>
+        <div class="two-column">
+            <div class="card">
+                <figure id="nuclear_fr"></figure>
+            </div>
+            <div class="card">
+                <figure id="china_unemployment"></figure>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Coding Challenge 3 -->
+<section>
+    <div class="container">
+        <h2>Coding Challenge 3: Policy Debate</h2>
+        <p>The third task is to create visualisations that support or oppose each other in a policy debate: Females are much more likely to participate in the labour market as part-time workers than their male counterparts, which contributed to the wage gap between male and female workers.</p>
+        
+        <div class="two-column">
+            <div class="card">
+                <figure id="part-time"></figure>
+            </div>
+            <div class="card">
+                <figure id="gender-gap"></figure>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Coding Challenge 4 -->
+<section>
+    <div class="container">
+        <h2>Coding Challenge 4: Replication. Re-create, then improve, someone else's chart</h2>
+        <p>This is a graph from the Financial Times with a poorly represented scale. I accessed the original graph and suspect that they have used the log scale but used the unaltered value as the scale. 
+        For example, the US did have around $60000 in 2020 as GDP per head, but on log scale, it's more like 11. I used the same data source from the Maddison Project, but an older version (because I couldn't download the 2023 version somehow) and created the following graph on scale.</p>
+        
+        <p><strong>Source:</strong> The Financial Times, "Can a fragmented Europe continue to prosper?" <a href="https://www.ft.com/content/b1f2c189-809f-4054-bf73-0eba674f4e13" target="_blank">View Article</a></p>
+        
+        <div class="card text-center">
+            <img src="IMG_0442.jpg" alt="Financial Times Bad Graph">
+        </div>
+        
+        <p><strong>Source:</strong> The Maddison Project (2020). "Maddison Project Database (MPD)". Version 2020. <a href="https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2020" target="_blank">View Data</a></p>
+        
+        <div class="card">
+            <figure id="real_gdp"></figure>
+        </div>
+    </div>
+</section>
+
+<!-- Coding Challenge 5 -->
+<section>
+    <div class="container">
+        <h2>Coding Challenge 5: Scraping and API</h2>
+        <p>To construct the population density, I tried to scrape the population data from the first table of this wikipedia page: https://en.wikipedia.org/wiki/List_of_countries_and_dependencies_by_population. And the geographic area from this wikipedia page https://en.wikipedia.org/wiki/List_of_countries_and_dependencies_by_area. I then merged the data from the two tables into one dataframe and list the first ten area with the highest population density. One of the challenges I encountered during this process was that Wikipedia initially rejected my web scraping request. I successfully overcame this obstacle by using a user agent command in my HTTP requests, which allowed the scraping to proceed without being blocked.</p>
+<p><strong>VIEW CODE HERE:</strong> <a href="https://colab.research.google.com/drive/1_W9UTyN2aPFnQ_6RzIglc0Fqnkw1eKRC?usp=sharing" target="_blank">CODE</a></p>
+
+<p>The graph showing the agricultural output of the US comes from an API constructed as such:</p>
+<ul>
+    <li>base_url = "https://api.worldbank.org/v2"</li>
+    <li>country_code = "US"</li>
+    <li>indicator_code = "AG.PRD.CROP.XD"</li>
+    <li>format_type = "json"</li>
+    <li>per_page = "20000"</li>
+    <li>date_range = "1961:2022"</li>
+    <li>url = f"{base_url}/country/{country_code}/indicator/{indicator_code}?format={format_type}&per_page={per_page}&date={date_range}"</li>
+</ul>
+<p><strong>VIEW CODE HERE:</strong> <a href="https://colab.research.google.com/drive/1UgkhScAhgJJkAfBgyegIkDkRQFpk56QU#scrollTo=LA0yMQjypeOH" target="_blank">CODE</a></p>
+        <div class="two-column">
+            <div class="card">
+                <figure id="population_density"></figure>
+            </div>
+            <div class="card">
+                <figure id="crop_overtime"></figure>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Coding Challenge 6 -->
+<section>
+    <div class="container">
+        <h2>Coding Challenge 6: Batch API Download</h2>
+        <p>I used a loop to batch download time series data from Alpha Vantage API for 6 tech stocks. Data was downloaded using Python, saved as JSON files to GitHub, and displayed here as interactive charts using loops.</p>
+        <p>The javascript for embedding the charts is here: </p>
+        <p>const stocks = ['AAPL', 'GOOGL', 'MSFT', 'AMZN', 'TSLA', 'NVDA'];
+            <p>stocks.forEach(symbol => {</p>
+    <p>vegaEmbed(`#chart-${symbol}`, `${symbol}_graph.json`);
+})</p>
+        <p><a href="https://github.com/anniewong0226/anniewong0226.github.io/blob/main/CC5_Loop.ipynb" target="_blank">View Google Colab Notebook</a></p>
+        
+        <div class="grid">
+            <div class="card">
+                <div id="chart-AAPL"></div>
+            </div>
+            <div class="card">
+                <div id="chart-GOOGL"></div>
+            </div>
+            <div class="card">
+                <div id="chart-MSFT"></div>
+            </div>
+            <div class="card">
+                <div id="chart-AMZN"></div>
+            </div>
+            <div class="card">
+                <div id="chart-TSLA"></div>
+            </div>
+            <div class="card">
+                <div id="chart-NVDA"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Coding Challenge 7 -->
+<section>
+    <div class="container">
+        <h2>Coding Challenge 7: Base maps and choropleths</h2>
+        <p>Listed here are two maps: a map of Welsh State Schools medium of language instruction and a map of Scottish Only Identity by local authority</p>
+        <p><a href="https://datamap.gov.wales/layergroups/geonode:all_schools_wales" target="_blank">View Data for Welsh school</a></p>
+        <p><a href="https://www.scotlandscensus.gov.uk/webapi/jsf/tableView/tableView.xhtml" target="_blank">View Data for Scottish Identity</a></p>
+        <div class="two-column">
+            <div class="card">
+                <figure id="map_wales"></figure>
+            </div>
+            <div class="card">
+                <figure id="map_scotland"></figure>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Coding Challenge 8 -->
+<section>
+    <div class="container">
+        <h2>Coding Challenge 8: Big Data</h2>
+        <p>I used the CPI data to construct the following two graphs. I first attempted to read the heads of the columns to identify the items data. I chose the prices for SIX BREAD ROLLS-WHITE/BROWN and filter the target data using item id. Then I constructed the median and average prices for each year and plotted the line chart using vegalite.</p>
+        <p><strong>VIEW CODE HERE:</strong> <a href="https://github.com/anniewong0226/anniewong0226.github.io/blob/main/CC8_Big%20data.ipynb" target="_blank">CODE</a></p>
+        <div class="card">
+            <figure id="bread_price"></figure>
+        </div>
+
+        <p><strong>Source:</strong> Davies, R, and McEvoy, F (2024), “Faster, bigger, cheaper: how AI can improve UK price data”. Economics Observatory, May. <a href="https://autocpi-public.s3.eu-west-2.amazonaws.com/lrpd/db_prices.parquet" target="_blank">View Data</a></p>
+
+        <div class="card">
+            <figure id="bread_price_by_region"></figure>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>Coding Challenge 9: Interactivity</h2>
+        <p>Here are two graphs with interactive features: the first one involves clickable legend and the second one with a slider to select the year./p>
+        
+        <div class="card">
+            <figure id="hourly_prices"></figure>
+        </div>
+        <p><strong>VIEW DATA HERE:</strong> <a href="https://raw.githubusercontent.com/anniewong0226/anniewong0226.github.io/refs/heads/main/hourly_average_prices.csv" target="_blank">DATA</a></p>
+        <div class="card">
+            <figure id="europe_yearly_generation"></figure>
+        </div>
+        <p><strong>VIEW DATA HERE:</strong> <a href="https://raw.githubusercontent.com/anniewong0226/anniewong0226.github.io/refs/heads/main/clean_energy_by_country_year.csv" target="_blank">DATA</a></p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>Coding Challenge 10: Machine Learning</h2>
+        <p>Here are two graphs with interactive features: the first one involves clickable legend and the second one with a slider to select the year./p>
+        <p><strong>VIEW DATA HERE:</strong> <a href="https://github.com/anniewong0226/anniewong0226.github.io/blob/main/compressed_data.csv.gz" target="_blank">DATA</a></p>
+        <p><strong>VIEW CODE HERE:</strong> <a href="https://github.com/anniewong0226/anniewong0226.github.io/blob/main/CC10_machine_learning.ipynb" target="_blank">CODE</a></p>
+        <div class="card text-center">
+            <img src="Regression.png" alt="Carbon free energy generation vs Average Hourly Prices">
+        </div>
+        
+        <div class="card">
+            <img src="cluster.png" alt="Country clusters based on clean energy generation and average hourly electricity prices">
+        </div>
+    </div>
+</section>
+
+<script>
+
+let figure_2_spec = "fig1_reciprocal-tariffs.json";
+vegaEmbed('#Location1', 'survey_harm.json');
+vegaEmbed('#Location2', figure_2_spec);
+vegaEmbed('#nuclear_fr', 'nuclearpower.json');
+vegaEmbed('#china_unemployment', 'China_unemployment.json');
+vegaEmbed('#real_gdp','visualization.vl.json');
+vegaEmbed('#map_wales','welsh_school.json');
+vegaEmbed('#map_scotland','scotland.json');
+vegaEmbed('#part-time','part_time.json');
+vegaEmbed('#gender-gap','gender_gap.json');
+vegaEmbed('#population_density','population_world.json');
+vegaEmbed('#crop_overtime','crop_overtime.json');
+vegaEmbed('#bread_price','bread_price_graph.json');
+vegaEmbed('#bread_price_by_region','byregion_breadprices.json');
+vegaEmbed('#hourly_prices','/CSS/Hourly_prices.json');
+vegaEmbed('#europe_yearly_generation','europe_yearly_generation.json');
+
+const stocks = ['AAPL', 'GOOGL', 'MSFT', 'AMZN', 'TSLA', 'NVDA'];
+
+stocks.forEach(symbol => {
+    vegaEmbed(`#chart-${symbol}`, `${symbol}_graph.json`);
+});
+
+</script>
+</body>
+</html>

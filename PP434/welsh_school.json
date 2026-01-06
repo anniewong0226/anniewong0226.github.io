@@ -1,0 +1,55 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": ["Distribution of Medium of Language Instruction", "in Welsh State Schools"],
+    "fontSize": 16,
+    "anchor": "middle",
+    "font": "Helvetica Neue, Helvetica, Arial, sans-serif",
+    "color": "#333"
+  },
+  "width": "container",
+  "height": 700,
+  "background": "#FFFFFF",
+  "projection": {"type": "mercator"},
+  "layer": [
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/jhellingsdata/RADataHub/refs/heads/main/MappingWorkshop/geo_data/LAD_WLS_2025_05.topojson",
+        "format": {"type": "topojson", "feature": "object_name"}
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "lightgray",
+        "stroke": "white",
+        "strokeWidth": 0.5
+      }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/anniewong0226/anniewong0226.github.io/refs/heads/main/df_schools_location.csv"
+      },
+      "mark": {"type": "circle", "size": 80},
+      "encoding": {
+        "longitude": {"field": "lon", "type": "quantitative"},
+        "latitude": {"field": "lat", "type": "quantitative"},
+        "color": {
+          "field": "language",
+          "legend": {
+            "orient": "bottom",
+            "labelFontSize": 13,
+            "titleFontSize": 16,
+            "columns": 2,
+            "symbolLimit": 0
+          }
+        },
+        "tooltip": [
+          {"field": "language", "type": "nominal", "title": "Language"}
+        ]
+      }
+    }
+  ],
+  "autosize": {
+    "type": "fit",
+    "contains": "padding"
+  }
+}

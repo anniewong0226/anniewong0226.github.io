@@ -1,0 +1,64 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Top 10 Countries by Population Density",
+    "fontSize": 17,
+    "font": "Helvetica Neue, Helvetica, Arial, sans-serif",
+    "color": "#333",
+    "anchor": "start"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/anniewong0226/anniewong0226.github.io/refs/heads/main/population_density_data.csv"
+  },
+  "transform": [
+    {"calculate": "toNumber(datum['Population Density'])", "as": "density_num"},
+    {
+      "window": [{"op": "rank", "as": "rank"}],
+      "sort": [{"field": "density_num", "order": "descending"}]
+    },
+    {"filter": "datum.rank <= 10"}
+  ],
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "density_num",
+      "type": "quantitative",
+      "title": "Population Density (people per km²)"
+    },
+    "y": {
+      "field": "Location",
+      "type": "nominal",
+      "sort": "-x",
+      "title": "Country"
+    },
+    "color": {
+      "field": "density_num",
+      "type": "quantitative",
+      "scale": {"scheme": "blues"},
+      "legend": null
+    },
+    "tooltip": [
+      {"field": "Location", "type": "nominal", "title": "Country"},
+      {
+        "field": "density_num",
+        "type": "quantitative",
+        "title": "Density (per km²)",
+        "format": ".2f"
+      },
+      {
+        "field": "Population",
+        "type": "quantitative",
+        "title": "Population",
+        "format": ","
+      },
+      {
+        "field": "Total in km2 (mi2)",
+        "type": "quantitative",
+        "title": "Area (km²)",
+        "format": ","
+      }
+    ]
+  },
+  "width": 300,
+  "height": 400
+}

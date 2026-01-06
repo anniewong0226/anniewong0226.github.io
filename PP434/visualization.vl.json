@@ -1,0 +1,116 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "background": "#FFFFFF",
+  "description": "Log GDP per capita (2011 PPP, thousands) across countries over time",
+  "title": {
+    "text": "Economic Growth Across Major Economies (1820-2018)",
+    "fontSize": 18,
+    "anchor": "start"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/anniewong0226/anniewong0226.github.io/refs/heads/main/mpd2020_log_wide.csv",
+    "format": {"type": "csv"}
+  },
+  "transform": [
+    {
+      "fold": [
+        "Brazil",
+        "China",
+        "Germany",
+        "India",
+        "Japan",
+        "Nigeria",
+        "United Kingdom",
+        "United States"
+      ],
+      "as": ["country", "log_gdppc"]
+    },
+    {"filter": "datum.log_gdppc > 0"}
+  ],
+  "width": 800,
+  "height": 400,
+  "encoding": {
+    "x": {
+      "field": "year",
+      "type": "temporal",
+      "title": "Year",
+      "axis": {
+        "labelFontSize": 14,
+        "titleFontSize": 16,
+        "grid": false
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {"type": "line", "strokeWidth": 2},
+      "encoding": {
+        "y": {
+          "field": "log_gdppc",
+          "type": "quantitative",
+          "title": "Log GDP per capita (2011 PPP, thousands)",
+          "scale": {"domain": [6, 11]},
+          "axis": {
+            "labelFontSize": 14,
+            "titleFontSize": 16,
+            "grid": false
+          }
+        },
+        "color": {
+          "field": "country",
+          "type": "nominal",
+          "title": "Country"
+        }
+      }
+    },
+    {
+      "transform": [{"filter": {"param": "hover", "empty": false}}],
+      "mark": {"type": "point", "size": 100, "filled": true},
+      "encoding": {
+        "y": {
+          "field": "log_gdppc",
+          "type": "quantitative"
+        },
+        "color": {
+          "field": "country",
+          "type": "nominal"
+        }
+      }
+    },
+    {
+      "transform": [{"filter": {"param": "hover", "empty": false}}],
+      "mark": {"type": "rule", "color": "gray", "strokeWidth": 1}
+    },
+    {
+      "mark": {"type": "point", "opacity": 0},
+      "encoding": {
+        "y": {
+          "field": "log_gdppc",
+          "type": "quantitative"
+        },
+        "tooltip": [
+          {"field": "year", "type": "temporal", "title": "Year"},
+          {"field": "country", "type": "nominal", "title": "Country"},
+          {"field": "log_gdppc", "type": "quantitative", "title": "log(GDPpc)", "format": ".2f"}
+        ]
+      },
+      "params": [
+        {
+          "name": "hover",
+          "select": {
+            "type": "point",
+            "fields": ["year"],
+            "on": "pointerover",
+            "clear": "pointerout"
+          }
+        }
+      ]
+    }
+  ],
+  "config": {
+    "legend": {
+      "labelFontSize": 14,
+      "titleFontSize": 16
+    }
+  }
+}

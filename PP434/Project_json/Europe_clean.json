@@ -1,0 +1,150 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Average Renewable Generation (%) Across Europe",
+    "fontSize": 18,
+    "anchor": "start"
+  },
+  "width": 800,
+  "height": 400,
+  "data": {
+    "url": "https://raw.githubusercontent.com/anniewong0226/anniewong0226.github.io/refs/heads/main/average_renewable_generation_europe.csv"
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "area",
+        "opacity": 0.2,
+        "color": "#2E7D32",
+        "clip": true,
+        "line": {
+          "color": "#2E7D32",
+          "strokeWidth": 3
+        }
+      },
+      "encoding": {
+        "x": {
+          "field": "Year",
+          "type": "quantitative",
+          "axis": {
+            "title": "Year",
+            "format": "d",
+            "tickCount": 10
+          },
+          "scale": {
+            "domain": [1990, 2024]
+          }
+        },
+        "y": {
+          "field": "Average Renewable Generation (%)",
+          "type": "quantitative",
+          "axis": {
+            "title": "Average Renewable Generation (%)"
+          },
+          "scale": {
+            "domain": [30, 70]
+          }
+        }
+      }
+    },
+    {
+      "params": [
+        {
+          "name": "hover",
+          "select": {
+            "type": "point",
+            "on": "mouseover",
+            "clear": "mouseout",
+            "nearest": true
+          }
+        }
+      ],
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "color": "#1B5E20"
+      },
+      "encoding": {
+        "x": {
+          "field": "Year",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "Average Renewable Generation (%)",
+          "type": "quantitative"
+        },
+        "size": {
+          "condition": {
+            "param": "hover",
+            "empty": false,
+            "value": 300
+          },
+          "value": 80
+        },
+        "opacity": {
+          "condition": {
+            "param": "hover",
+            "empty": false,
+            "value": 1
+          },
+          "value": 0.5
+        },
+        "tooltip": [
+          {"field": "Year", "type": "quantitative", "format": "d", "title": "Year"},
+          {"field": "Average Renewable Generation (%)", "type": "quantitative", "format": ".2f", "title": "Average (%)"}
+        ]
+      }
+    },
+    {
+      "transform": [
+        {"filter": {"param": "hover", "empty": false}}
+      ],
+      "mark": {
+        "type": "rule",
+        "color": "#1B5E20",
+        "strokeWidth": 2,
+        "strokeDash": [4, 4]
+      },
+      "encoding": {
+        "x": {
+          "field": "Year",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "transform": [
+        {"filter": {"param": "hover", "empty": false}}
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 8,
+        "dy": -12,
+        "fontSize": 13,
+        "fontWeight": "bold",
+        "color": "#1B5E20"
+      },
+      "encoding": {
+        "x": {
+          "field": "Year",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "Average Renewable Generation (%)",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "Average Renewable Generation (%)",
+          "type": "quantitative",
+          "format": ".1f"
+        }
+      }
+    }
+  ],
+  "config": {
+    "view": {
+      "strokeWidth": 0
+    }
+  }
+}

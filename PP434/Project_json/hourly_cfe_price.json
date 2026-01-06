@@ -1,0 +1,109 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Average Hourly Price and Carbon-Free % (2024)",
+    "fontSize": 16,
+    "anchor": "start"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/anniewong0226/anniewong0226.github.io/refs/heads/main/hourly_average_price_and_cfe.csv"
+  },
+  "transform": [
+    {"filter": "datum.year == '2024'"}
+  ],
+  "width": 800,
+  "height": 400,
+  "layer": [
+    {
+      "params": [{
+        "name": "grid",
+        "select": "interval",
+        "bind": "scales"
+      }],
+      "mark": {
+        "type": "line",
+        "strokeWidth": 3,
+        "point": {"filled": true, "size": 80}
+      },
+      "encoding": {
+        "x": {
+          "field": "hour",
+          "type": "quantitative",
+          "title": "Hour of Day",
+          "scale": {"domain": [0, 23]},
+          "axis": {"tickCount": 24, "grid": true}
+        },
+        "y": {
+          "field": "avg_price",
+          "type": "quantitative",
+          "title": "Average Price (€/MWh)",
+          "scale": {"zero": false}
+        },
+        "color": {
+          "field": "year",
+          "type": "nominal",
+          "scale": {
+            "range": ["#c0392b"]
+          },
+          "legend": {
+            "title": "Price - Year",
+            "symbolStrokeWidth": 3,
+            "symbolSize": 100
+          }
+        },
+        "tooltip": [
+          {"field": "year", "type": "nominal", "title": "Year"},
+          {"field": "hour", "type": "quantitative", "title": "Hour"},
+          {"field": "avg_price", "type": "quantitative", "title": "Price (€/MWh)", "format": ".2f"},
+          {"field": "avg_carbon_free_pct", "type": "quantitative", "title": "Carbon-Free %", "format": ".2f"}
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "line",
+        "strokeWidth": 2.5,
+        "strokeDash": [8, 4],
+        "point": {"filled": false, "size": 80}
+      },
+      "encoding": {
+        "x": {
+          "field": "hour",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "avg_carbon_free_pct",
+          "type": "quantitative",
+          "title": "Carbon-Free %",
+          "scale": {"zero": false}
+        },
+        "color": {
+          "field": "year",
+          "type": "nominal",
+          "scale": {
+            "range": ["#2ecc71"]
+          },
+          "legend": {
+            "title": "Carbon-Free",
+            "symbolStrokeWidth": 2.5,
+            "symbolSize": 100
+          }
+        },
+        "tooltip": [
+          {"field": "year", "type": "nominal", "title": "Year"},
+          {"field": "hour", "type": "quantitative", "title": "Hour"},
+          {"field": "avg_price", "type": "quantitative", "title": "Price (€/MWh)", "format": ".2f"},
+          {"field": "avg_carbon_free_pct", "type": "quantitative", "title": "Carbon-Free %", "format": ".2f"}
+        ]
+      }
+    }
+  ],
+  "resolve": {
+    "scale": {"y": "independent"},
+    "legend": {"color": "independent"}
+  },
+  "config": {
+    "axis": {"labelFontSize": 12, "titleFontSize": 13},
+    "legend": {"labelFontSize": 11, "titleFontSize": 12, "orient": "bottom", "direction": "horizontal"}
+  }
+}

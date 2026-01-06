@@ -1,0 +1,99 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Unemployment rate is growing in China",
+    "font":"Helvetica Neue",
+    "anchor": "start",
+    "subtitle": "Rate, % | NBS through ECO API",
+    "fontSize": 17,
+    "subtitleFontSize": 12,
+    "color": "#000000",
+    "subtitleColor": "#000000"
+  },
+  "config": {
+    "font":"Helvetica Neue"
+  },
+  "height": 250,
+  "width": "container",
+  "autosize": {"type": "fit", "contains": "padding"},
+  "background": "#FFFFFF",
+  "view": {"fill": "#FFFFFF", "strokeOpacity": 0},
+
+  "data": {
+    "url": "https://api.economicsobservatory.com/chn/unem?vega",
+    "format": {"type": "json"}
+  },
+
+  "encoding": {
+    "x": {
+      "field": "date",
+      "type": "temporal",
+      "axis": {"title": "", "grid": false}
+    }
+  },
+
+  "layer": [
+    {
+      "encoding": {
+        "y": {
+          "field": "value",
+          "type": "quantitative",
+          "axis": {"title": "", "grid": false}
+        }
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "line",
+            "color": "#f4134d",
+            "strokeWidth": 2
+          }
+        },
+        {
+          "transform": [{"filter": {"param": "hover", "empty": false}}],
+          "mark": {
+            "type": "point",
+            "size": 80,
+            "color": "#f4134d"
+          }
+        }
+      ]
+    },
+
+    {
+      "mark": {"type": "rule", "color": "#f4134d"},
+      "encoding": {
+        "opacity": {
+          "condition": {"param": "hover", "empty":false,"value": 0.3},
+          "value": 0
+        },
+        "tooltip": [
+          {
+            "field": "date",
+            "type": "temporal",
+            "title": "Year",
+            "timeUnit": "year"
+          },
+          {
+            "field": "value",
+            "type": "quantitative",
+            "title": "%",
+            "format": ",.0f"
+          }
+        ]
+      },
+      "params": [
+        {
+          "name": "hover",
+          "select": {
+            "type": "point",
+            "fields": ["date"],
+            "nearest": true,
+            "on": "pointerover",
+            "clear": "pointerout"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="example4.css">
+    <title>Project: Cleaner and Cheaper? Exploring the Price Impact of Clean Energy Transition in Europe</title>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+
+<section class="hero">
+    <h1 class="big">Cleaner and Cheaper? Exploring the Price Impact of Clean Energy Transition in Europe</h1>
+    <p>Annie Wong | <a href="https://www.linkedin.com/in/annie-wong-ba9150218">LinkedIn</a> | 
+    <a href="https://www.github.com/anniewong0226">GitHub</a></p>
+    <a href="index.html">← Back to Portfolio</a>
+</section>
+
+<section>
+    <div class="container">
+        <h2>Project Background: Understanding the Renewable Energy Paradox</h2>
+        <p>Europe has pursued aggressive renewable energy policy to incentivise the energy transition to combat climate change and reduce dependence on fossil fuels. The conventional wisdom goes: more renewable generation should lead to lower electricity prices due to near-zero marginal costs of renewable power. However, the reality is oftent more nuanced than a plainly straightfoward relationship. This project investigates: <strong>How does increasing renewable penetration affect electricity prices across European markets?</strong></p>
+        <p>By analyzing hourly price and carbon-free generation data from 20 European countries, this project explores both price effects of renewables and the emerging challenges they pose to Europe's electricity system, including increased price volatility, negative pricing events, and intraday fluctuations.</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>Growing Renewable Penetration in Europe</h2>
+        <p>Europe has undergone a dramatic energy transformation over the past three decades. Renewable sources have grown from just 35% of electricity generation in 1990 to over 60% in 2024. This chart shows the steady acceleration of this transition, with particularly rapid growth since 2010 driven by ambitious climate policies and falling costs for wind and solar technologies.</p>
+        <p>With such a fundamental shift in place, the trend raises critical questions: As the electricity system becomes increasingly dependent on intermittent renewable sources like wind and solar, how do wholesale electricity prices respond?</p>
+        <p><strong>Data Source:</strong> Ember Yearly Electricity Data <a href="https://ember-energy.org/data/yearly-electricity-data/" target="_blank">Link</a> | <strong>VIEW CODE:</strong> <a href="https://github.com/anniewong0226/anniewong0226.github.io/blob/main/CC8_Big%20data.ipynb" target="_blank">CODE</a></p>
+        <div class="card">
+            <figure id="renewable_europe"></figure>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>The Merit Order Effect in Action: High Carbon-Free Generation, Low Price</h2>
+        <p>This chart reveals the fundamental relationship between carbon-free generation and electricity prices on an hourly basis throughout 2024. The pattern is striking: during hours when carbon-free sources (primarily wind and solar) meet 80-90% of demand, average prices drop to €40-60/MWh. Conversely, when carbon-free generation falls below 40%, prices spike to €120-140/MWh as expensive fossil fuel plants must be activated.</p>
+        <p>This demonstrates the <strong>merit order effect</strong> in action. Renewable generators with near-zero marginal costs are dispatched first, pushing higher-cost coal and gas plants out of the generation mix. When renewables dominate, only the cheapest plants run, suppressing wholesale prices. When renewables are scarce, expensive thermal plants set the market price.</p>
+        <p>The relationship shown here forms the theoretical foundation for understanding why countries with higher renewable penetration generally experience lower average prices—a relationship we'll quantify in the regression analysis below.</p>
+        <p><strong>Data Source:</strong> ENTSO-E Transparency Platform | <strong>VIEW CODE:</strong> <a href="https://github.com/anniewong0226/anniewong0226.github.io/blob/main/CC8_Big%20data.ipynb" target="_blank">CODE</a></p>
+        <div class="card">
+            <figure id="hourly_prices_cfe"></figure>
+        </div>
+    </div>
+</section>
+
+<!-- CHART 3: DUCK CURVE -->
+<section>
+    <div class="container">
+        <h2>The Emerging Challenge: Intraday Price Volatility and the "Duck Curve"</h2>
+        <p>While renewables suppress average prices, they introduce a new challenge: dramatic intraday price swings. This chart tracks average hourly prices from 2017 to 2024, revealing a striking transformation in price patterns.</p>
+        <p>Before 2021, prices remained relatively stable throughout the day. Since 2021, a pronounced "duck curve" has emerged—prices plummet during midday hours (12:00-15:00) when solar generation peaks, then surge during evening hours (18:00-20:00) as solar generation drops and demand remains high. This forces grid operators to rapidly ramp up gas and coal plants, creating price spikes that can exceed €100/MWh.</p>
+        <p>The year 2022 stands out with exceptionally high prices (averaging over €280/MWh during peak hours), driven by the energy crisis following Russia's invasion of Ukraine. By 2023-2024, prices moderated but the duck curve pattern persists, highlighting the structural challenge of integrating variable renewable generation. The widening gap between midday troughs and evening peaks signals growing need for energy storage and flexible capacity.</p>
+        <p><strong>Data Source:</strong> ENTSO-E Transparency Platform | <strong>VIEW CODE:</strong> <a href="https://github.com/anniewong0226/anniewong0226.github.io/blob/main/CC8_Big%20data.ipynb" target="_blank">CODE</a></p>
+        <div class="card">
+            <figure id="hourly_prices"></figure>
+        </div>
+    </div>
+</section>
+
+<!-- CHART 4: NEGATIVE PRICING MAP -->
+<section>
+    <div class="container">
+        <h2>Negative Electricity Pricing has Risen in Europe</h2>
+        <p>When renewable generation surges beyond what the grid can absorb, markets experience an extreme phenomenon: negative prices. During these hours, generators actually pay grid operators to take their electricity. This occurs because wind and solar operators prefer to pay small penalties rather than shut down and lose subsidies, and because ramping conventional power plants up and down is technically difficult and expensive.</p>
+        <p>This interactive map shows the frequency of negative pricing hours across Europe. In 2024, countries like Germany and Spain recorded hundreds of negative-price hours—a record high. Germany experienced over 300 such hours (representing 3.3% of all hours), while Spain saw similar patterns. These events cluster in countries with high solar penetration and limited energy storage or interconnection capacity to export surplus generation.</p>
+        <p>Hover over countries to see detailed statistics. Notice that Nordic countries (Norway, Sweden) with extensive hydro storage show higher negative pricing rates because their flexible hydro systems can afford to "absorb" surplus renewable generation when profitable. Meanwhile, countries with less flexibility face grid stability challenges during these events.</p>
+        <p>While negative prices benefit consumers and reflect the abundance of clean energy, frequent occurrences threaten the economic viability of all generators and signal urgent need for grid flexibility solutions—including battery storage, demand response, and stronger interconnections.</p>
+        <p><strong>Data Source:</strong> ENTSO-E Transparency Platform | <strong>VIEW CODE:</strong> <a href="https://github.com/anniewong0226/anniewong0226.github.io/blob/main/CC8_Big%20data.ipynb" target="_blank">CODE</a></p>
+    </div>
+
+    <iframe src="europe_negative_hours_map.html" 
+            width="100%" 
+            height="700px" 
+            frameborder="0">
+    </iframe>
+</section>
+
+<!-- CHART 5: REGRESSION -->
+<section>
+    <div class="container">
+        <h2>Quantifying the Relationship: Carbon-Free Generation Reduces Prices</h2>
+        <p>Aggregating to the country level, we can quantify the overall price effect of carbon-free generation. This regression analysis uses data from 20 European countries, comparing each country's average carbon-free percentage against average electricity prices over 2023-2024.</p>
+        <p>The results are clear and statistically significant (p < 0.001): <strong>each percentage point increase in carbon-free generation is associated with a €0.82 decrease in average electricity prices.</strong> The model's R² of 0.592 indicates that carbon-free penetration explains approximately 59% of the variation in country-level prices—a remarkably strong relationship for cross-country data.</p>
+        <p>Countries like Norway and Sweden, which generate nearly 99% carbon-free electricity (primarily hydro), enjoy average prices around €46/MWh. In contrast, countries with only 50-60% carbon-free generation, such as Poland and Greece, face prices exceeding €100/MWh. The regression constant of €146.63 represents the theoretical price with zero carbon-free generation, illustrating the substantial price premium of fossil fuel-dependent systems.</p>
+        <p><strong>Methodology:</strong> I merged hourly price data from ENTSO-E with hourly carbon-free generation data from Electricity Maps, creating country-level aggregations from 2023-2024. Each country's average price and average carbon-free percentage were calculated, then subjected to ordinary least squares regression.</p>
+        <p><strong>VIEW DATA:</strong> <a href="https://github.com/anniewong0226/anniewong0226.github.io/blob/main/compressed_data.csv.gz" target="_blank">Compressed Dataset</a> | <strong>VIEW CODE:</strong> <a href="https://github.com/anniewong0226/anniewong0226.github.io/blob/main/CC10_machine_learning.ipynb" target="_blank">Analysis Notebook</a></p>
+        <div class="card">
+            <figure id="price_vs_carbonfree"></figure>
+        </div>
+    </div>
+</section>
+
+<!-- CHART 6: CLUSTERING -->
+<section>
+    <div class="container">
+        <h2>Not All Countries Experience the Same Transition</h2>
+        <p>While the aggregate relationship between renewables and prices is clear, not all European countries experience the energy transition identically. This clustering analysis groups countries based on eight dimensions: average price, price volatility, carbon-free percentage, carbon-free volatility, renewable percentage, negative pricing frequency, and price variability metrics.</p>
+        <p><strong>Cluster 0 (High Price, Moderate Clean):</strong> Countries like the UK, Italy, Poland, Greece, and Ireland face high average prices (€109/MWh) despite moderate renewable penetration (43%). These are typically island or peripheral markets with limited interconnection capacity and reliance on imported fossil fuels. They experience relatively few negative pricing events (0.67%) because they lack the flexibility to absorb surplus generation.</p>
+        <p><strong>Cluster 1 (Low Price, Very High Clean):</strong> Norway and Sweden stand out with exceptionally low prices (€46/MWh) and nearly 99% carbon-free generation, dominated by flexible hydropower. Their extensive hydro storage allows them to handle intermittent renewables effectively, leading to more frequent negative prices (3.56%) as they can afford to absorb surplus generation profitably.</p>
+        <p><strong>Cluster 2 (Mid-Market with Volatility):</strong> This group includes Germany, Spain, France, and other central European countries with strong renewable growth but significant challenges managing intermittency. They show moderate prices (€80-90/MWh) with high volatility as they navigate the transition without Nordic-style hydro flexibility.</p>
+        <p>This heterogeneity reveals that success in the energy transition depends not just on renewable capacity, but on grid flexibility, interconnection, storage, and market design. Countries pursuing similar renewable targets may face vastly different price outcomes based on these structural factors.</p>
+        <p><strong>Methodology:</strong> Principal Component Analysis reduced eight variables to four dimensions explaining 95.75% of variance, followed by K-means clustering to identify natural groupings of countries with similar energy market characteristics.</p>
+        <p><strong>VIEW CODE:</strong> <a href="https://github.com/anniewong0226/anniewong0226.github.io/blob/main/CC10_machine_learning.ipynb" target="_blank">Clustering Analysis</a></p>
+        <div class="card">
+            <figure id="country_cluster_interactive"></figure>
+        </div>
+    </div>
+</section>
+
+<!-- DATA & TOOLS SECTION -->
+<section>
+    <div class="container">
+        <h2>Data Sources and Technical Approach</h2>
+        <h3>Data Sources</h3>
+        <p><strong>Ember Climate Data Explorer:</strong> Historical renewable generation data for Europe (1990-2024), accessed via their public CSV downloads and visualizations.</p>
+        <p><strong>ENTSO-E Transparency Platform:</strong> Hourly day-ahead electricity prices for 20 European bidding zones (2017-2024). Data accessed via the ENTSO-E API using Python's <code>entsoe-py</code> library.</p>
+        <p><strong>Electricity Maps API:</strong> Hourly carbon-free generation percentages by country (2023-2024), accessed via their public API with automated data pulls.</p>
+        
+        <h3>Technical Challenges & Solutions</h3>
+        <p><strong>Challenge 1: Data Volume:</strong> Hourly data for 20 countries over 2 years yields 350,000+ observations. Solution: Used compression (gzip) for storage and efficient pandas operations for processing.</p>
+        <p><strong>Challenge 2: Missing Data:</strong> Some countries had gaps in reporting. Solution: Implemented forward-fill for short gaps (<3 hours) and excluded days with >6 hours missing from aggregations.</p>
+        <p><strong>Challenge 3: API Rate Limits:</strong> ENTSO-E limits requests to avoid overload. Solution: Implemented request batching with delays and local caching to minimize repeated API calls.</p>
+        
+        <h3>Automation & Replication</h3>
+        <p>All analysis is fully reproducible. The repository includes:</p>
+        <ul>
+            <li><code>requirements.txt</code> with all Python dependencies</li>
+            <li>API configuration templates (users add their own keys)</li>
+            <li>Automated scripts that fetch, clean, and analyze data in sequence</li>
+            <li>All visualizations generated programmatically using Vega-Lite specifications</li>
+        </ul>
+        <p><strong>To replicate:</strong> Clone the repository → Install dependencies → Add API keys → Run <code>scripts/fetch_data.py</code> → Run analysis notebooks in order.</p>
+        <p><strong>Repository:</strong> <a href="https://www.github.com/anniewong0226/anniewong0226.github.io" target="_blank">GitHub Repository</a></p>
+    </div>
+</section>
+
+<!-- CONCLUSIONS -->
+<section>
+    <div class="container">
+        <h2>Conclusions: Cheaper, But More Complex</h2>
+        <p>The evidence strongly supports that increased renewable penetration reduces average electricity prices through the merit order effect. Countries with high carbon-free generation enjoy significantly lower wholesale prices, with each percentage point of carbon-free generation reducing prices by approximately €0.82/MWh.</p>
+        
+        <p>However, this price benefit comes with new challenges. The energy transition is creating unprecedented price volatility, with the emergence of "duck curve" patterns where midday solar abundance crashes prices while evening demand spikes them. Negative pricing events—once rare—now occur regularly in high-renewable markets, signaling grid inflexibility and the urgent need for energy storage solutions.</p>
+        
+        <p>The clustering analysis reveals that national context matters enormously. Countries with flexible hydro resources (Norway, Sweden) navigate high renewable penetration successfully with low, stable prices. Others face persistent high prices despite renewable investment, constrained by limited interconnection or lack of flexible capacity.</p>
+        
+        <h3>Policy Implications</h3>
+        <p>The path to cheaper, cleaner electricity requires more than just building wind and solar farms. It demands:</p>
+        <ul>
+            <li><strong>Energy storage deployment</strong> to smooth intraday price swings and capture surplus renewable generation</li>
+            <li><strong>Grid interconnection expansion</strong> to allow surplus renewable energy in one market to serve demand in another</li>
+            <li><strong>Market design reforms</strong> that properly value flexibility and ensure adequate investment in backup capacity</li>
+            <li><strong>Demand-side flexibility</strong> through smart charging, industrial load shifting, and time-of-use pricing</li>
+        </ul>
+        
+        <h3>Future Research Directions</h3>
+        <p>This project opens several avenues for deeper investigation: How does battery storage adoption correlate with reduced price volatility? What is the optimal mix of renewable capacity and flexible resources? How do electricity market designs (e.g., capacity markets vs. energy-only markets) affect price outcomes? As Europe continues its energy transition, understanding these dynamics will be crucial for policymakers, investors, and consumers alike.</p>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Annie Wong | Data Science Project | <a href="https://www.github.com/anniewong0226">View Code Repository</a></p>
+</footer>
+
+<script>
+vegaEmbed('#renewable_europe', '/Project_json/Europe_clean.json');
+vegaEmbed('#hourly_prices_cfe', '/Project_json/hourly_cfe_price.json');
+vegaEmbed('#hourly_prices', '/CSS/Hourly_prices.json');
+vegaEmbed('#price_vs_carbonfree', 'price_vs_carbonfree_interactive.json');
+vegaEmbed('#country_cluster_interactive', 'country_cluster_interactive.json');
+</script>
+
+</body>
+</html>

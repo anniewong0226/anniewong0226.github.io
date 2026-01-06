@@ -1,0 +1,49 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": ["Percentage of Scottish Only Identity", "by Local Authority in Scotland"],
+    "fontSize": 16,
+    "anchor": "middle",
+    "font": "Helvetica Neue, Helvetica, Arial, sans-serif",
+    "color": "#333"
+  },
+  "background": "#FFFFFF",
+  "width": "container",
+  "height": 700,
+  "data": {
+    "url": "https://raw.githubusercontent.com/jhellingsdata/RADataHub/refs/heads/main/MappingWorkshop/geo_data/LAD_SCT_2025_05.topojson",
+    "format": {"type": "topojson", "feature": "object_name"}
+  },
+  "transform": [
+    {
+      "lookup": "properties.LAD25CD",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com/anniewong0226/anniewong0226.github.io/refs/heads/main/final_scot_df.csv"
+        },
+        "key": "LAD25CD",
+        "fields": ["% of Scottish Only"]
+      }
+    }
+  ],
+  "projection": {"type": "mercator"},
+  "mark": {"type": "geoshape", "stroke": "white", "strokeWidth": 0.5},
+  "encoding": {
+    "color": {
+      "field": "% of Scottish Only",
+      "type": "quantitative",
+      "scale": {"scheme": "blues"},
+      "legend": {"title": "% ", "format": ".1f","labelFontSize":12,
+      "titleFontSize":12}
+    },
+    "tooltip": [
+      {"field": "properties.LAD25NM", "type": "nominal", "title": "Area"},
+      {
+        "field": "% of Scottish Only",
+        "type": "quantitative",
+        "title": "% Scottish Only Identity",
+        "format": ".2f"
+      }
+    ]
+  }
+}
