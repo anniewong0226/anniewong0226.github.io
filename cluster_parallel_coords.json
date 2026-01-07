@@ -1,0 +1,200 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Cluster Characteristics: Energy Market Profiles",
+    "fontSize": 18,
+    "font": "sans-serif"
+  },
+  "data": {
+    "values": [
+      {
+        "Cluster": 0,
+        "Cluster_Name": "High Price\nModerate Clean",
+        "Countries": "BE, CZ, DE, GB, GR, HU, IE, IT, NL, PL, RO",
+        "Metric": "Avg Price\n(\u20ac/MWh)",
+        "Value": 100.31,
+        "Normalized_Value": 1.0
+      },
+      {
+        "Cluster": 0,
+        "Cluster_Name": "High Price\nModerate Clean",
+        "Countries": "BE, CZ, DE, GB, GR, HU, IE, IT, NL, PL, RO",
+        "Metric": "Carbon-Free\n(%)",
+        "Value": 57.9,
+        "Normalized_Value": 0.0
+      },
+      {
+        "Cluster": 0,
+        "Cluster_Name": "High Price\nModerate Clean",
+        "Countries": "BE, CZ, DE, GB, GR, HU, IE, IT, NL, PL, RO",
+        "Metric": "Renewable\n(%)",
+        "Value": 41.06,
+        "Normalized_Value": 0.0
+      },
+      {
+        "Cluster": 0,
+        "Cluster_Name": "High Price\nModerate Clean",
+        "Countries": "BE, CZ, DE, GB, GR, HU, IE, IT, NL, PL, RO",
+        "Metric": "Price\nVolatility",
+        "Value": 50.72,
+        "Normalized_Value": 0.7464788732394364
+      },
+      {
+        "Cluster": 0,
+        "Cluster_Name": "High Price\nModerate Clean",
+        "Countries": "BE, CZ, DE, GB, GR, HU, IE, IT, NL, PL, RO",
+        "Metric": "Negative\nPricing (%)",
+        "Value": 1.8,
+        "Normalized_Value": 0.0
+      },
+      {
+        "Cluster": 1,
+        "Cluster_Name": "Mid Price\nHigh Clean",
+        "Countries": "AT, CH, DK, ES, FR, NO, PT",
+        "Metric": "Avg Price\n(\u20ac/MWh)",
+        "Value": 76.87,
+        "Normalized_Value": 0.5566483828257992
+      },
+      {
+        "Cluster": 1,
+        "Cluster_Name": "Mid Price\nHigh Clean",
+        "Countries": "AT, CH, DK, ES, FR, NO, PT",
+        "Metric": "Carbon-Free\n(%)",
+        "Value": 88.88,
+        "Normalized_Value": 0.8080333854981743
+      },
+      {
+        "Cluster": 1,
+        "Cluster_Name": "Mid Price\nHigh Clean",
+        "Countries": "AT, CH, DK, ES, FR, NO, PT",
+        "Metric": "Renewable\n(%)",
+        "Value": 68.73,
+        "Normalized_Value": 1.0
+      },
+      {
+        "Cluster": 1,
+        "Cluster_Name": "Mid Price\nHigh Clean",
+        "Countries": "AT, CH, DK, ES, FR, NO, PT",
+        "Metric": "Price\nVolatility",
+        "Value": 43.83,
+        "Normalized_Value": 0.0
+      },
+      {
+        "Cluster": 1,
+        "Cluster_Name": "Mid Price\nHigh Clean",
+        "Countries": "AT, CH, DK, ES, FR, NO, PT",
+        "Metric": "Negative\nPricing (%)",
+        "Value": 2.0,
+        "Normalized_Value": 0.04555808656036445
+      },
+      {
+        "Cluster": 2,
+        "Cluster_Name": "Low Price\nVery High Clean",
+        "Countries": "FI, SE",
+        "Metric": "Avg Price\n(\u20ac/MWh)",
+        "Value": 47.44,
+        "Normalized_Value": 0.0
+      },
+      {
+        "Cluster": 2,
+        "Cluster_Name": "Low Price\nVery High Clean",
+        "Countries": "FI, SE",
+        "Metric": "Carbon-Free\n(%)",
+        "Value": 96.24,
+        "Normalized_Value": 1.0
+      },
+      {
+        "Cluster": 2,
+        "Cluster_Name": "Low Price\nVery High Clean",
+        "Countries": "FI, SE",
+        "Metric": "Renewable\n(%)",
+        "Value": 61.22,
+        "Normalized_Value": 0.7285869172388867
+      },
+      {
+        "Cluster": 2,
+        "Cluster_Name": "Low Price\nVery High Clean",
+        "Countries": "FI, SE",
+        "Metric": "Price\nVolatility",
+        "Value": 53.06,
+        "Normalized_Value": 1.0
+      },
+      {
+        "Cluster": 2,
+        "Cluster_Name": "Low Price\nVery High Clean",
+        "Countries": "FI, SE",
+        "Metric": "Negative\nPricing (%)",
+        "Value": 6.19,
+        "Normalized_Value": 1.0
+      }
+    ]
+  },
+  "width": 600,
+  "height": 400,
+  "mark": {
+    "type": "line",
+    "point": true,
+    "strokeWidth": 3
+  },
+  "encoding": {
+    "x": {
+      "field": "Metric",
+      "type": "nominal",
+      "axis": {
+        "labelAngle": -45,
+        "title": null
+      }
+    },
+    "y": {
+      "field": "Normalized_Value",
+      "type": "quantitative",
+      "scale": {
+        "domain": [
+          0,
+          1
+        ]
+      },
+      "axis": {
+        "title": "Normalized Value (0-1 scale)"
+      }
+    },
+    "color": {
+      "field": "Cluster_Name",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "High Price\nModerate Clean",
+          "Mid Price\nHigh Clean",
+          "Low Price\nVery High Clean"
+        ],
+        "range": [
+          "#e74c3c",
+          "#3498db",
+          "#2ecc71"
+        ]
+      },
+      "legend": {
+        "title": "Cluster Type"
+      }
+    },
+    "tooltip": [
+      {
+        "field": "Cluster_Name",
+        "title": "Cluster"
+      },
+      {
+        "field": "Countries",
+        "title": "Countries"
+      },
+      {
+        "field": "Metric",
+        "title": "Metric"
+      },
+      {
+        "field": "Value",
+        "title": "Actual Value",
+        "format": ".2f"
+      }
+    ]
+  }
+}

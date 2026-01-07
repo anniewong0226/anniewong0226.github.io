@@ -1,0 +1,55 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Hourly Average Electricity Prices by Year",
+    "fontSize": 16,
+    "anchor": "start"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/anniewong0226/anniewong0226.github.io/refs/heads/main/hourly_average_prices.csv"
+  },
+  "params": [
+    {
+      "name": "year_select",
+      "select": {"type": "point", "fields": ["Year"]},
+      "bind": "legend"
+    }
+  ],
+  "mark": {
+    "type": "line",
+    "point": true,
+    "tooltip": true,
+    "strokeWidth": 2
+  },
+  "encoding": {
+    "x": {
+      "field": "Hour",
+      "type": "quantitative",
+      "title": "Hour of Day",
+      "scale": {"domain": [0, 23]},
+      "axis": {"tickCount": 24}
+    },
+    "y": {
+      "field": "Average_Price",
+      "type": "quantitative",
+      "title": "Average Price (€/MWh)"
+    },
+    "color": {
+      "field": "Year",
+      "type": "nominal",
+      "title": "Year",
+      "legend": {"orient": "right"}
+    },
+    "opacity": {
+      "condition": {"param": "year_select", "value": 1},
+      "value": 0.2
+    },
+    "tooltip": [
+      {"field": "Year", "type": "nominal", "title": "Year"},
+      {"field": "Hour", "type": "quantitative", "title": "Hour"},
+      {"field": "Average_Price", "type": "quantitative", "title": "Avg Price (€/MWh)", "format": ".2f"}
+    ]
+  },
+  "width": 650,
+  "height": 400
+}
